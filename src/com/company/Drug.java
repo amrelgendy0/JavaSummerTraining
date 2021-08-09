@@ -1,6 +1,8 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class Drug extends javax.swing.JFrame {
@@ -8,6 +10,7 @@ public class Drug extends javax.swing.JFrame {
 
     public Drug() {
         initComponents();
+
         super.setVisible(true);
 //              java.awt.EventQueue.invokeLater(new Runnable() {
 //            @Override

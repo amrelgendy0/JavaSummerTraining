@@ -17,6 +17,8 @@ public class menu1 extends javax.swing.JFrame {
      * Creates new form menu1
      */
     public menu1() {
+        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
+        this.setContentPane(new ImagePanel(myImage));
         initComponents();
         super.setVisible(true);
     }

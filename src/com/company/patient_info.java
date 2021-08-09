@@ -17,6 +17,8 @@ public class patient_info extends javax.swing.JFrame {
      * Creates new form patient_info
      */
     public patient_info() {
+        Image myImage = new ImageIcon(this.getClass().getResource("2.jpg")).getImage();
+        this.setContentPane(new ImagePanel(myImage));
         initComponents();
        super.setVisible(true);
     }

@@ -1,5 +1,4 @@
 package com.company;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -12,7 +11,7 @@ import javax.swing.LayoutStyle;
 
 public class LOG_IN extends javax.swing.JFrame {
 
-  private   Map<String,String> loginData =new HashMap<String,String>();
+    private Map<String, String> loginData = new HashMap<String, String>();
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -21,16 +20,15 @@ public class LOG_IN extends javax.swing.JFrame {
             }
         });
     }
-    
-    public boolean is_member(){
+
+    public boolean is_member() {
 
 
-        if(loginData.containsKey(getUsername())) {
+        if (loginData.containsKey(getUsername())) {
             return Objects.equals(loginData.get(getUsername()), getPassword());
 
 
-        }else return  false;
-
+        } else return false;
 
 
     }
@@ -44,15 +42,19 @@ public class LOG_IN extends javax.swing.JFrame {
     }
 
     public LOG_IN() {
+        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
+        this.setContentPane(new ImagePanel(myImage));
         initComponents();
-        loginData.put("amr","amrelgendy0");
-        loginData.put("mayman","m1822001");
-        loginData.put("mohamed","0");
-        loginData.put("magda","0");
-        loginData.put("fatma","0");
+        loginData.put("amr", "amrelgendy0");
+        loginData.put("mayman", "m1822001");
+        loginData.put("mohamed", "0");
+        loginData.put("magda", "0");
+        loginData.put("fatma", "0");
+        loginData.put("0", "0");
         tfp.setText("");
         super.setResizable(false);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Evaluation license - amr elgendy
@@ -115,54 +117,54 @@ public class LOG_IN extends javax.swing.JFrame {
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addGap(0, 64, Short.MAX_VALUE)
-                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 621, GroupLayout.PREFERRED_SIZE)
-                    .addGap(23, 23, 23))
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGroup(contentPaneLayout.createParallelGroup()
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                                .addGap(0, 64, Short.MAX_VALUE)
+                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 621, GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(23, 23, 23)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(114, 114, 114)
-                            .addComponent(btn, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
-                            .addGap(155, 155, 155)
-                            .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(135, Short.MAX_VALUE))
+                                .addGroup(contentPaneLayout.createParallelGroup()
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                                .addGap(23, 23, 23)
+                                                .addGroup(contentPaneLayout.createParallelGroup()
+                                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                                                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                                                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                                .addGap(114, 114, 114)
+                                                .addComponent(btn, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
+                                                .addGap(155, 155, 155)
+                                                .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                                .addGap(270, 270, 270)
+                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(135, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(26, 26, 26)
-                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
-                    .addGap(36, 36, 36)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
-                    .addGap(25, 25, 25)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE))
-                    .addGap(80, 80, 80)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(can, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                    .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18))
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
+                                .addGap(25, 25, 25)
+                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE))
+                                .addGap(80, 80, 80)
+                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(can, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -170,45 +172,37 @@ public class LOG_IN extends javax.swing.JFrame {
 
     private void canActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_canActionPerformed
         // TODO add your handling code here:
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_canActionPerformed
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
 
-        if(is_member())
-        {
+        if (is_member()) {
             this.dispose();
-          new menu1();
-        }
-        else
+            new menu1();
+        } else
             JOptionPane.showMessageDialog(null, "User Id or Password may be wrong. Please Try Again!", "Message", JOptionPane.ERROR_MESSAGE);
-        
+
     }//GEN-LAST:event_btnActionPerformed
 
     private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
 
 
-            JOptionPane.showMessageDialog(null,textBlocks(), "Message", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
 
     }//GEN-LAST:event_btnActionPerformed
 
     public String textBlocks() {
-String[] names = new String[]{
-    "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
-        "محمد ايمن احمد محمد - جروب ١٢"
-        ,"ماجدة جمال عبدالجيد حسين الجبالي - جروب ١١"
+        String[] names = new String[]{
+                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
+                "محمد ايمن احمد محمد - جروب ١٢"
+                , "ماجدة جمال عبدالجيد حسين الجبالي - جروب ١١",
+                "محمد امين احمد العزب شلبي - جروب ١٢",
         };
-String data="عمل الطلبة\n";
-for(String name :names){
-    data+=name+"\n";
-
-
-
-}
-
-
-
-
+        String data = "";
+        for (String name : names) {
+            data += name + "\n";
+        }
         return data;
     }
 
@@ -233,12 +227,13 @@ for(String name :names){
     private JButton can;
     private JButton btn;
     private JButton btn2;
+
     // End of variables declaration//GEN-END:variables
-    public  String getUsername() {
+    public String getUsername() {
         return tfu.getText();
     }
 
-    public  String getPassword() {
+    public String getPassword() {
         return tfp.getText();
     }
 }

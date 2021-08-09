@@ -30,6 +30,8 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Evaluation license - amr elgendy
     private void initComponents() {
+        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
+        this.setContentPane(new ImagePanel(myImage));
         jLabel1 = new JLabel();
         jTextField1 = new JTextField();
         jButton1 = new JButton();
@@ -40,7 +42,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Medicne");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.ITALIC, 24));

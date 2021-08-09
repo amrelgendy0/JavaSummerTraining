@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class patient_registertion extends javax.swing.JFrame {
     public patient_registertion() {
+        Image myImage = new ImageIcon(this.getClass().getResource("2.jpg")).getImage();
+        this.setContentPane(new ImagePanel(myImage));
         initComponents();
         super.setVisible(true);
 //          java.awt.EventQueue.invokeLater(new Runnable() {
