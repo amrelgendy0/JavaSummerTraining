@@ -194,10 +194,9 @@ public class LOG_IN extends javax.swing.JFrame {
 
     public String textBlocks() {
 String[] names = new String[]{
-    "عمرو أحمد محمد حسنين الجندي - مجموعة ١٠",
-        "محمد ايمن احمد محمد - مجموعة ١٢"
-
-
+    "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
+        "محمد ايمن احمد محمد - جروب ١٢"
+        ,"ماجدة جمال عبدالجيد حسين الجبالي - جروب ١١"
         };
 String data="عمل الطلبة\n";
 for(String name :names){

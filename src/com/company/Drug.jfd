@@ -11,8 +11,8 @@ new FormModel {
 			"defaultCloseOperation": 2
 			"title": "Add Medicne"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq {par t:::p {seq {par l {seq {space :p:22:p, par l {seq {comp jLabel5:::p:152:p, space s:::p, comp jTextField4:::p:226:p}, seq {comp jLabel4:::p:152:p, space :p:20:p, comp jTextField3:::p:226:p}, seq l {space :p:2:p, comp jLabel6:::p:152:p}}}, par t:l {seq t {space :::p, comp jLabel2:::p:152:p, space s:::p, comp jTextField1:::p:226:p}, seq l {space :p:24:p, comp jLabel3:::p:152:p, space s:::p, comp jTextField6:::p:226:p}}, seq l {space :p:22:p, comp jLabel7:::p:152:p, space s:::p, comp jTextField5:::p:226:p}, seq l {space :p:194:p, comp jTextField2:::p:226:p}}, space :p:59:p}, seq t {space :p:139:p, comp jButton1:::p::p, space :::x, comp jButton2:::p::p}}, space ::194:x}, seq t {space :0:167:x, comp jLabel1:::p:356:p, space :p:150:p}}"
-				"$verticalGroup": "par l {seq l {space :p:10:p, comp jLabel1:::p:38:p, space u:::p, par b {comp jTextField6::b:p:29:p, comp jLabel3::b:p:28:p}, space :::p, par l {seq {comp jTextField1:::p:29:p, space :p:7:p}, seq t {comp jLabel2:::p:28:p, space s:::p}}, par b {comp jLabel6::b:p:28:p, comp jTextField2::b:p:29:p}, space s:::p, par b {comp jTextField3::b:p:29:p, comp jLabel4::b:p:28:p}, space s:::p, par b {comp jLabel5::b:p:28:p, comp jTextField4::b:p:29:p}, space :p:23:p, par b {comp jLabel7::b:p:28:p, comp jTextField5::b:p:29:p}, space ::41:x, par b {comp jButton2::b:p::p, comp jButton1::b:p::p}, space :p:101:p}}"
+				"$horizontalGroup": "par l {seq {par t:::p {seq {par l {seq {space :p:22:p, par l {seq {comp jLabel5:::p:152:p, space s:::p, comp jTextField4:::p:226:p}, seq {comp jLabel4:::p:152:p, space :p:20:p, comp jTextField3:::p:226:p}, seq l {space :p:2:p, comp jLabel6:::p:152:p}}}, par t:l {seq t {space :::p, comp jLabel2:::p:152:p, space s:::p, comp jTextField1:::p:226:p}, seq l {space :p:24:p, comp jLabel3:::p:152:p, space s:::p, comp jTextField6:::p:226:p}}, seq l {space :p:22:p, comp jLabel7:::p:152:p, space s:::p, comp jTextField5:::p:226:p}, seq l {space :p:194:p, comp jTextField2:::p:226:p}}, space :p:59:p}, seq t {space :p:48:p, comp editorPane1:::p::p, space :p:51:p, comp jButton1:::p::p, space :::x, comp jButton2:::p::p}}, space ::194:x}, seq t {space :0:167:x, comp jLabel1:::p:356:p, space :p:150:p}}"
+				"$verticalGroup": "par l {seq t {par t {seq {space :::x, comp editorPane1:::p::p}, seq {space :p:10:p, comp jLabel1:::p:38:p, space u:::p, par b {comp jTextField6::b:p:29:p, comp jLabel3::b:p:28:p}, space :::p, par l {seq {comp jTextField1:::p:29:p, space :p:7:p}, seq t {comp jLabel2:::p:28:p, space s:::p}}, par b {comp jLabel6::b:p:28:p, comp jTextField2::b:p:29:p}, space s:::p, par b {comp jTextField3::b:p:29:p, comp jLabel4::b:p:28:p}, space s:::p, par b {comp jLabel5::b:p:28:p, comp jTextField4::b:p:29:p}, space :p:23:p, par b {comp jLabel7::b:p:28:p, comp jTextField5::b:p:29:p}, space ::41:x, par b {comp jButton2::b:p::p, comp jButton1::b:p::p}}}, space :p:101:p}}"
 			} ) {
 				name: "pan"
 				"foreground": new java.awt.Color( 0, 0, 153, 255 )
@@ -92,6 +92,9 @@ new FormModel {
 					"foreground": new java.awt.Color( 0, 0, 153, 255 )
 					"text": "cancel"
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton2ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JEditorPane" ) {
+					name: "editorPane1"
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
