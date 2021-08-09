@@ -1,0 +1,109 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :0:0:x, comp jButton1:::p:121:p, space :p:129:p}, seq {par l {seq l {space :p:103:p, comp jLabel1:::p:444:p}, seq l {space :p:20:p, comp jLabel9:::p:80:p}, seq l {space :p:18:p, par l {seq l {par l {comp jLabel2::l:p:120:p, comp jLabel3::l:p::p, comp jLabel4::l:p::p}, space :p:53:p, par l {comp jTextField1:::p:278:p, comp jTextField2:::p:278:p, comp jTextField3:::p:278:p}}, seq l {par l {comp jLabel5::l:p::p, comp jLabel6::l:p:80:p}, space :p:47:p, par l {comp jTextField5:::p:373:p, comp jTextField4:::p:319:p, comp jTextField7::l:p:279:p, comp jTextField6:::p:423:p}}}}}, space ::49:x}};par l {seq l {space :p:20:p, comp jLabel8:::p:80:p, space ::563:x}};par l {seq l {space :p:165:p, comp jButton2:::p:121:p, space ::377:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp jLabel1:::p:45:p, space u:::p, par l {comp jLabel2:::p:26:p, comp jTextField1::l:p:26:p}, space :::p, par l {comp jLabel3:::p::p, comp jTextField2:::p:26:p}, space :p:14:p, par b {comp jLabel4::b:p::p, comp jTextField3::b:p:28:p}, space :p:23:p, par b {comp jLabel5::b:p::p, comp jTextField4::b:p:28:p}, space :p:24:p, par b {comp jLabel6::b:p::p, comp jTextField5::b:p:28:p}, space ::30:x, comp jTextField7:::p:28:p, space u:::p, par b {comp jLabel9::b:p::p, comp jTextField6::b:p:29:p}, space :p:58:p, comp jButton1:::p::p, space :p:20:p}};par l {seq t {space ::292:x, comp jLabel8:::p::p, space :p:162:p}};par l {seq t {space ::427:x, comp jButton2:::p::p, space :p:16:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"background": new java.awt.Color( 255, 51, 51, 255 )
+			"foreground": new java.awt.Color( 51, 255, 51, 255 )
+			"title": "Register Patient"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "          patient registertion form"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "first name"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField1"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField1ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "last name"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField2"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField2ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel4"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "Age"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField3"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel5"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "prescribe medicne"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField4"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField4ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel6"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "Address"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField5"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField5ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel8"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "Doctor"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField6"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField6ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton1"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "cancel"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton1ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton2"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "Register"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton2ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel9"
+				"font": new java.awt.Font( "Tahoma", 1, 14 )
+				"foreground": new java.awt.Color( 0, 153, 0, 255 )
+				"text": "Date"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextField7"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField7ActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 665, 495 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

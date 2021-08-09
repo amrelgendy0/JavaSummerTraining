@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :0:64:x, comp jLabel1:::p:621:p, space :p:23:p}, seq {par l {seq l {space :p:23:p, par l {seq {comp jLabel2:::p:262:p, space :::p, comp tfp:::p:282:p}, seq {comp jLabel3:::p:262:p, space :::p, comp tfu:::p:282:p}}}, seq l {space :p:114:p, comp btn:::p:128:p, space :p:155:p, comp can:::p:128:p}, seq l {space :p:270:p, comp btn2:::p:128:p}}, space ::135:x}}"
+			"$verticalGroup": "par l {seq l {space :p:26:p, comp jLabel1:::p:55:p, space :p:36:p, par b {comp tfu::b:p:36:p, comp jLabel3::b:p:24:p}, space :p:25:p, par t {comp jLabel2:::p:24:p, comp tfp:::p:39:p}, space :p:80:p, par b {comp btn::b:p:40:p, comp can::b:p:40:p}, space ::26:x, comp btn2:::p:40:p, space :p:18:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"background": new java.awt.Color( 0, 153, 153, 255 )
+			"foreground": new java.awt.Color( 0, 204, 255, 255 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"font": new java.awt.Font( "Tahoma", 1, 24 )
+				"foreground": new java.awt.Color( 0, 0, 153, 255 )
+				"text": "WELCOME TO OUR PHARMACY SYSTEM"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 0, 153, 255 )
+				"text": "PASSWORD"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 0, 153, 255 )
+				"text": "USER NAME"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "tfp"
+				"text": "jPasswordField1"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "tfpActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfu"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "tfuActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "can"
+				"font": new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": new java.awt.Color( 0, 0, 102, 255 )
+				"text": "CANCEL"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "canActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn"
+				"font": &Font0 new java.awt.Font( "Tahoma", 1, 18 )
+				"foreground": &Color0 new java.awt.Color( 0, 0, 153, 255 )
+				"text": "LOG IN"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn2"
+				"font": #Font0
+				"foreground": #Color0
+				"text": "credits"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 710, 445 )
+			"location": new java.awt.Point( 15, 0 )
+		} )
+	}
+}
