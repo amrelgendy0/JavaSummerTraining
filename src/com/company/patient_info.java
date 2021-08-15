@@ -50,10 +50,8 @@ public class patient_info extends javax.swing.JFrame {
         Image myImage = new ImageIcon(this.getClass().getResource("2.jpg")).getImage();
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
-        try{    patients = DataManager.getPathient();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+       patients = DataManager.getPathient();
+
         table1.setAutoCreateColumnsFromModel(true);
         DefaultTableModel model = (DefaultTableModel)table1.getModel();
         model.setColumnCount(0);

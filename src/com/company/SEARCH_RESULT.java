@@ -33,6 +33,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
      */
     public SEARCH_RESULT() {
         initComponents();
+        getSearch();
         super.setVisible(true);
     }
 
@@ -121,8 +122,11 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-try{
 
+   getSearch();
+}
+
+void getSearch(){
     ArrayList<Drug> medicine = DataManager.searchMedicine(jTextField1.getText());
     table1.setAutoCreateColumnsFromModel(true);
     DefaultTableModel model = (DefaultTableModel)table1.getModel();
@@ -138,24 +142,21 @@ try{
 
         ArrayList<Object> toshow = new ArrayList<Object>();
 
-      for(Drug dd : medicine){
-          switch (i) {
-              case 0 -> toshow.add(dd.getName());
-              case 1 -> toshow.add(dd.getType());
-              case 2 -> toshow.add(dd.getExpireDate());
-              case 3 -> toshow.add(dd.getPrice());
-              case 4 -> toshow.add(dd.getId());
-          }
-      }
-         model.addColumn(col.getHeaderValue().toString(), toshow.toArray());
+        for(Drug dd : medicine){
+            switch (i) {
+                case 0 -> toshow.add(dd.getName());
+                case 1 -> toshow.add(dd.getType());
+                case 2 -> toshow.add(dd.getExpireDate());
+                case 3 -> toshow.add(dd.getPrice());
+                case 4 -> toshow.add(dd.getId());
+            }
+        }
+        model.addColumn(col.getHeaderValue().toString(), toshow.toArray());
 
     }
-} catch (SQLException throwables) {
-    throwables.printStackTrace();
 }
 
-
-    }//GEN-LAST:event_jButton1ActionPerformed
+    //GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

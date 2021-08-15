@@ -249,7 +249,7 @@ public class patient_registertion extends javax.swing.JFrame {
                 jTextField4.getText(),jTextField5.getText(),
                 jTextField7.getText(),jTextField6.getText(),0
         );
-try{    DataManager.addPatient(p);
+   DataManager.addPatient(p);
 
 jTextField1.setText("");
 jTextField2.setText("");
@@ -257,9 +257,7 @@ jTextField3.setText("");
 jTextField4.setText("");
 jTextField5.setText("");
 jTextField6.setText("");
-jTextField7.setText("");} catch (SQLException throwables) {
-    throwables.printStackTrace();
-}
+jTextField7.setText("");
 
 
     }//GEN-LAST:event_jButton2ActionPerformed

@@ -237,8 +237,7 @@ public class DrugView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        Drug drug = new Drug(jTextField6.getText(),Double.parseDouble(jTextField3.getText()),jTextField2.getText(),0,jTextField1.getText());
 
-       try {
-           DataManager.addDrug(drug);
+            DataManager.addDrug(drug);
 
            jTextField1.setText("");
            jTextField2.setText("");
@@ -248,9 +247,7 @@ public class DrugView extends javax.swing.JFrame {
            jTextField6.setText("");
 
 
-       } catch (SQLException throwables) {
-           throwables.printStackTrace();
-       }
+
 
 
     }//EN-LAST:event_jButton1ActionPerformed
