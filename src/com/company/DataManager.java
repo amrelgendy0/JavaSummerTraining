@@ -1,21 +1,15 @@
 package com.company;
-
-import com.company.model.Drug;
-import com.company.model.Patient;
-import com.company.model.User;
-
+import com.company.model.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 
 public class DataManager {
- public static   HashSet<User> users = new HashSet<User>();
-    public static HashSet<Drug> drugs = new HashSet<Drug>();
-    public static HashSet<Patient> patients = new HashSet<Patient>();
+ private static   HashSet<User> users = new HashSet<User>();
+    private static HashSet<Drug> drugs = new HashSet<Drug>();
+    private static HashSet<Patient> patients = new HashSet<Patient>();
     static private Connection con = null;
-
     public static void addPatient(Patient p) throws SQLException {
-
         String query = "INSERT INTO Patient (firstname, lastname, Age, prescribeMedicine,Address,Doctor,Date) VALUES (?,?, ?, ?,?,?,?)";
         PreparedStatement preparedStmt = con.prepareStatement(query);
         preparedStmt.setString(1, p.getFirstname());
@@ -29,16 +23,11 @@ public class DataManager {
         getPathient();
         preparedStmt.close();
     }
-
-
     public DataManager() throws SQLException {
-
         String username = "root";
         String password = "Amr@2020";
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/PH", username, password);
       getUsers();
-
-
     }
 
     public  static void addDrug(Drug d) throws SQLException {
@@ -51,7 +40,6 @@ public class DataManager {
        preparedStmt.execute();
        getDrug();
 preparedStmt.close();
-
     }
 
     public static Patient getPathent(String name)
@@ -59,7 +47,6 @@ preparedStmt.close();
         if((p.getFirstname() + " " + p.getLastname()).equals(name)){
             return  p;
         }
-
     }
         return null;
     }
@@ -69,12 +56,9 @@ public static ArrayList<Drug> searchMedicine(String key) throws SQLException {
 ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
     for (Drug drug : drugs) {
         if (drug.values().contains(key)) {
-
             searchedDrug.add(drug);
         }
-
     }
-
     return searchedDrug;
 }
 
@@ -86,21 +70,15 @@ ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
         while (rs.next()) {
             patients.add(new Patient(rs.getString("firstname"), rs.getString("lastname"), rs.getDouble("Age")
                     , rs.getString("prescribeMedicine"), rs.getString("Address"), rs.getString("Doctor"),
-
-
                     rs.getString("Date"),
                     rs.getInt("id")
-
-
             ));
         }
         st.close();
-
         return patients;
     }
-
-
-    public static HashSet<User> getUsers() throws SQLException {
+    
+    private static HashSet<User> getUsers() throws SQLException {
         users.clear();
         String query = "SELECT * FROM Users";
         Statement st = con.createStatement();
@@ -112,18 +90,16 @@ ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
           users.add(new User(firstName,pass,isAdmin));
        }
       st.close();
-
       return users;
     }
 
-    public static  HashSet<Drug>  getDrug() throws SQLException {
+    private static HashSet<Drug>  getDrug() throws SQLException {
         drugs.clear();
         String query = "SELECT * FROM Drug";
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(query);
         while (rs.next())
         {
-
             drugs.add(new com.company.model.Drug(
                     rs.getString("name"),rs.getDouble("price"),
                     rs.getString("exdate"),
@@ -131,9 +107,16 @@ ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
                     rs.getString("type")));
         }
         st.close();
-
         return drugs;
     }
-
+    public static HashSet<Drug> drugs() {
+        return drugs;
+    }
+    public static HashSet<Patient> patients() {
+        return patients;
+    }
+    public static HashSet<User> users() {
+        return users;
+    }
 }
 

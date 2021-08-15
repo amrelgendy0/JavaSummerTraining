@@ -42,7 +42,7 @@ public class LOG_IN extends javax.swing.JFrame {
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
 
-        for (User user: DataManager.users
+        for (User user: DataManager.users()
              ) {
             if(user.isAdmin()){
                 loginData.put(user.getUsername(),user.getPassword());
