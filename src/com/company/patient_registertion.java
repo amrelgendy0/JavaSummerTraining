@@ -42,7 +42,7 @@ public class patient_registertion extends javax.swing.JFrame {
         setBackground(new Color(255, 51, 51));
         setForeground(new Color(51, 255, 51));
         setTitle("Register Patient");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 18));

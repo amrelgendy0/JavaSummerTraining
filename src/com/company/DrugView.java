@@ -1,14 +1,17 @@
 package com.company;
 
+import com.company.model.Drug;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.sql.SQLException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class Drug extends javax.swing.JFrame {
+public class DrugView extends javax.swing.JFrame {
 
 
-    public Drug() {
+    public DrugView() {
         initComponents();
 
         super.setVisible(true);
@@ -44,7 +47,7 @@ public class Drug extends javax.swing.JFrame {
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Medicne");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //======== pan ========
         {
@@ -232,7 +235,24 @@ public class Drug extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       Drug drug = new Drug(jTextField6.getText(),Double.parseDouble(jTextField3.getText()),jTextField2.getText(),0,jTextField1.getText());
+
+       try {
+           DataManager.addDrug(drug);
+
+           jTextField1.setText("");
+           jTextField2.setText("");
+           jTextField3.setText("");
+           jTextField4.setText("");
+           jTextField5.setText("");
+           jTextField6.setText("");
+
+
+       } catch (SQLException throwables) {
+           throwables.printStackTrace();
+       }
+
+
     }//EN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

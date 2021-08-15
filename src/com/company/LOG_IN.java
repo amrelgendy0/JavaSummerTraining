@@ -1,4 +1,6 @@
 package com.company;
+import com.company.model.User;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,17 +11,11 @@ import java.util.Map;
 import java.util.Objects;
 import javax.swing.LayoutStyle;
 
+
 public class LOG_IN extends javax.swing.JFrame {
 
     private Map<String, String> loginData = new HashMap<String, String>();
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LOG_IN().setVisible(true);
-            }
-        });
-    }
 
     public boolean is_member() {
 
@@ -42,15 +38,17 @@ public class LOG_IN extends javax.swing.JFrame {
     }
 
     public LOG_IN() {
-        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
+        Image myImage = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("1.jpg"))).getImage();
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
-        loginData.put("amr", "amrelgendy0");
-        loginData.put("mayman", "m1822001");
-        loginData.put("mohamed", "0");
-        loginData.put("magda", "0");
-        loginData.put("fatma", "0");
-        loginData.put("0", "0");
+
+        for (User user: DataManager.users
+             ) {
+            if(user.isAdmin()){
+                loginData.put(user.getUsername(),user.getPassword());
+
+            }
+        }
         tfp.setText("");
         super.setResizable(false);
     }
@@ -72,7 +70,7 @@ public class LOG_IN extends javax.swing.JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBackground(new Color(0, 153, 153));
         setForeground(new Color(0, 204, 255));
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
@@ -237,4 +235,5 @@ public class LOG_IN extends javax.swing.JFrame {
     public String getPassword() {
         return tfp.getText();
     }
+
 }
