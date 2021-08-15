@@ -1,7 +1,11 @@
 package com.company;
 
+import com.company.model.Patient;
+
 import java.awt.*;
+import java.sql.SQLException;
 import javax.swing.*;
+import javax.xml.crypto.Data;
 
 public class patient_registertion extends javax.swing.JFrame {
     public patient_registertion() {
@@ -239,7 +243,25 @@ public class patient_registertion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  
+        Patient p = new Patient(jTextField1.getText(),
+                jTextField2.getText(),
+               Double.parseDouble( jTextField3.getText()),
+                jTextField4.getText(),jTextField5.getText(),
+                jTextField7.getText(),jTextField6.getText(),0
+        );
+try{    DataManager.addPatient(p);
+
+jTextField1.setText("");
+jTextField2.setText("");
+jTextField3.setText("");
+jTextField4.setText("");
+jTextField5.setText("");
+jTextField6.setText("");
+jTextField7.setText("");} catch (SQLException throwables) {
+    throwables.printStackTrace();
+}
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
