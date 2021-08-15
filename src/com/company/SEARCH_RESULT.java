@@ -50,7 +50,6 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
         jButton1 = new JButton();
         jLabel2 = new JLabel();
         scrollPane1 = new JScrollPane();
-
         table1 = new JTable();
 
         //======== this ========
@@ -73,6 +72,9 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
         //======== scrollPane1 ========
         {
+
+            //---- table1 ----
+            table1.setEnabled(false);
             scrollPane1.setViewportView(table1);
         }
 

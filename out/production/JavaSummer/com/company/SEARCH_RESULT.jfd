@@ -33,6 +33,7 @@ new FormModel {
 				name: "scrollPane1"
 				add( new FormComponent( "javax.swing.JTable" ) {
 					name: "table1"
+					"enabled": false
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
