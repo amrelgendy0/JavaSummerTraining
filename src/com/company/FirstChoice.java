@@ -1,5 +1,4 @@
-import com.company.LOG_IN;
-import com.company.DataManager;
+package com.company;
 
 import javax.swing.*;
 import java.awt.*;

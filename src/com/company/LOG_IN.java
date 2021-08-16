@@ -171,6 +171,7 @@ public class LOG_IN extends javax.swing.JFrame {
 
     private void canActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_canActionPerformed
         // TODO add your handling code here:
+        new FirstChoice();
         this.dispose();
     }//GEN-LAST:event_canActionPerformed
 
