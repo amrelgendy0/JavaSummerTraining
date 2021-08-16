@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FirstChoice">
+  <grid id="27dc6" binding="FirstChoice" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="25" left="25" bottom="25" right="25"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <enabled value="true"/>
+      <foreground color="-1"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="4d668" class="javax.swing.JButton" binding="adminButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
+          <foreground color="-12483986"/>
+          <hideActionText value="false"/>
+          <text value="Admin"/>
+          <toolTipText value="Modify pharmacy medicine and patients!"/>
+        </properties>
+      </component>
+      <component id="e2baa" class="javax.swing.JButton" binding="customerButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
+          <foreground color="-12483986"/>
+          <hideActionText value="false"/>
+          <text value="Customer"/>
+          <toolTipText value="Ready to order, Click here!"/>
+        </properties>
+      </component>
+      <component id="a61d5" class="javax.swing.JButton" binding="creditsButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="18" style="0"/>
+          <foreground color="-16554282"/>
+          <text value="Credits"/>
+          <toolTipText value="Summer project team members' name"/>
+        </properties>
+      </component>
+      <component id="53839" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="20" style="1"/>
+          <foreground color="-4502960"/>
+          <text value="Welcome to pharmacy"/>
+        </properties>
+      </component>
+      <component id="24d8b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono ExtraBold" size="16" style="0"/>
+          <text value="Choose option"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

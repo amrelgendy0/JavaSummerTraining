@@ -4,23 +4,72 @@ package com.company;/*
  * and open the template in the editor.
  */
 
+import com.company.model.Drug;
+import com.company.model.Patient;
+
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
  * @author MINTESINOT
  */
 public class patient_info extends javax.swing.JFrame {
+    HashSet<Patient> patients  = null;
+    
+    private void table1MouseClicked(MouseEvent e) {
+        JTable source = (JTable)e.getSource();
+        int row = source.rowAtPoint( e.getPoint() );
+        int column = source.columnAtPoint( e.getPoint() );
+        String s=source.getModel().getValueAt(row, column)+"";
+        Patient p = DataManager.getPathent(s);
+        assert p != null;
+        jTextField3.setText(p.getFirstname());
+        jTextField5.setText(p.getLastname());
+        jTextField2.setText(String.valueOf(p.getAge()));
+        jTextField1.setText(p.getPrescribeMedicine());
+        jTextField7.setText(p.getAddress());
+        jTextField4.setText(p.getDoctor());
+        jTextField6.setText(p.getDate());    }
 
-    /**
-     * Creates new form patient_info
-     */
+        private void scrollPane1MouseClicked(MouseEvent e) {
+            // TODO add your code here
+        }
+
     public patient_info() {
         Image myImage = new ImageIcon(this.getClass().getResource("2.jpg")).getImage();
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
-       super.setVisible(true);
+       patients = DataManager.getPathient();
+
+        table1.setAutoCreateColumnsFromModel(true);
+        DefaultTableModel model = (DefaultTableModel)table1.getModel();
+        model.setColumnCount(0);
+        for(int i = 0 ; i < 1 ; i ++){
+            TableColumn col = new TableColumn(model.getColumnCount());
+            col.setHeaderValue("Patient Full Name");
+            table1.addColumn(col);
+            ArrayList<Object> toshow = new ArrayList<Object>();
+
+            assert patients != null;
+            for(Patient dd : patients){
+                toshow.add(dd.getFirstname() +" "+ dd.getLastname());
+            }
+            model.addColumn(col.getHeaderValue().toString(), toshow.toArray());
+        }
+
+        super.setVisible(true);
+        super.setResizable(false);
     }
 
     /**
@@ -48,6 +97,8 @@ public class patient_info extends javax.swing.JFrame {
         jTextField6 = new JTextField();
         jTextField7 = new JTextField();
         jButton1 = new JButton();
+        scrollPane1 = new JScrollPane();
+        table1 = new JTable();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -56,50 +107,78 @@ public class patient_info extends javax.swing.JFrame {
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel1.setForeground(new Color(51, 51, 51));
-        jLabel1.setText("         patient information");
+        jLabel1.setForeground(new Color(187, 74, 80));
+        jLabel1.setText("         Patient information");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel2.setText("first name");
+        jLabel2.setText("First name");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel3.setText("age");
+        jLabel3.setText("Age");
 
         //---- jLabel4 ----
         jLabel4.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel4.setText("last name");
+        jLabel4.setText("Last name");
 
         //---- jLabel5 ----
         jLabel5.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel5.setText("prescribe medicne");
+        jLabel5.setText("Prescribe medicine");
 
         //---- jLabel6 ----
         jLabel6.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel6.setText("doctor");
+        jLabel6.setText("Doctor");
 
         //---- jLabel7 ----
         jLabel7.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel7.setText("address");
+        jLabel7.setText("Address");
 
         //---- jLabel8 ----
         jLabel8.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel8.setText("    date");
+        jLabel8.setText("Date");
 
         //---- jTextField1 ----
+        jTextField1.setEnabled(false);
         jTextField1.addActionListener(e -> jTextField1ActionPerformed(e));
 
+        //---- jTextField2 ----
+        jTextField2.setEnabled(false);
+
+        //---- jTextField3 ----
+        jTextField3.setEnabled(false);
+
         //---- jTextField4 ----
+        jTextField4.setEnabled(false);
         jTextField4.addActionListener(e -> jTextField4ActionPerformed(e));
 
         //---- jTextField5 ----
+        jTextField5.setEnabled(false);
         jTextField5.addActionListener(e -> jTextField5ActionPerformed(e));
+
+        //---- jTextField6 ----
+        jTextField6.setEnabled(false);
+
+        //---- jTextField7 ----
+        jTextField7.setEnabled(false);
 
         //---- jButton1 ----
         jButton1.setFont(new Font("Tahoma", Font.BOLD, 14));
         jButton1.setText("Exit");
         jButton1.addActionListener(e -> jButton1ActionPerformed(e));
+
+        //======== scrollPane1 ========
+        {
+
+            //---- table1 ----
+            table1.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    table1MouseClicked(e);
+                }
+            });
+            scrollPane1.setViewportView(table1);
+        }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -112,78 +191,83 @@ public class patient_info extends javax.swing.JFrame {
                             .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 288, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(159, 159, 159)
-                            .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
                             .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField7, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(130, 130, 130)
+                                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(jTextField7, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
-                                .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))
-                            .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE))))
-                    .addContainerGap(68, Short.MAX_VALUE))
+                            .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                    .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-                    .addGap(27, 27, 27)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-                    .addGap(39, 39, 39)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-                    .addGap(24, 24, 24)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-                    .addGap(30, 30, 30)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField7, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-                    .addGap(76, 76, 76)
-                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 490, GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+                            .addGap(27, 27, 27)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(19, 19, 19)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField7, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
+                            .addGap(33, 33, 33)
+                            .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(0, 50, 50))))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -204,7 +288,7 @@ public class patient_info extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -258,5 +342,7 @@ public class patient_info extends javax.swing.JFrame {
     private JTextField jTextField6;
     private JTextField jTextField7;
     private JButton jButton1;
+    private JScrollPane scrollPane1;
+    private JTable table1;
     // End of variables declaration//GEN-END:variables
 }

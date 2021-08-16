@@ -1,7 +1,11 @@
 package com.company;
 
+import com.company.model.Patient;
+
 import java.awt.*;
+import java.sql.SQLException;
 import javax.swing.*;
+import javax.xml.crypto.Data;
 
 public class patient_registertion extends javax.swing.JFrame {
     public patient_registertion() {
@@ -9,6 +13,7 @@ public class patient_registertion extends javax.swing.JFrame {
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
         super.setVisible(true);
+        super.setResizable(false);
 //          java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
 //                new patient_registertion().setVisible(true);
@@ -42,17 +47,17 @@ public class patient_registertion extends javax.swing.JFrame {
         setBackground(new Color(255, 51, 51));
         setForeground(new Color(51, 255, 51));
         setTitle("Register Patient");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel1.setForeground(new Color(0, 153, 0));
-        jLabel1.setText("          patient registertion form");
+        jLabel1.setForeground(new Color(187, 74, 80));
+        jLabel1.setText("                        Patient Registration Form");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 14));
         jLabel2.setForeground(new Color(0, 153, 0));
-        jLabel2.setText("first name");
+        jLabel2.setText("First name");
 
         //---- jTextField1 ----
         jTextField1.addActionListener(e -> jTextField1ActionPerformed(e));
@@ -60,7 +65,7 @@ public class patient_registertion extends javax.swing.JFrame {
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 14));
         jLabel3.setForeground(new Color(0, 153, 0));
-        jLabel3.setText("last name");
+        jLabel3.setText("Last name");
 
         //---- jTextField2 ----
         jTextField2.addActionListener(e -> jTextField2ActionPerformed(e));
@@ -73,7 +78,7 @@ public class patient_registertion extends javax.swing.JFrame {
         //---- jLabel5 ----
         jLabel5.setFont(new Font("Tahoma", Font.BOLD, 14));
         jLabel5.setForeground(new Color(0, 153, 0));
-        jLabel5.setText("prescribe medicne");
+        jLabel5.setText("Prescribe medicine");
 
         //---- jTextField4 ----
         jTextField4.addActionListener(e -> jTextField4ActionPerformed(e));
@@ -97,7 +102,7 @@ public class patient_registertion extends javax.swing.JFrame {
         //---- jButton1 ----
         jButton1.setFont(new Font("Tahoma", Font.BOLD, 18));
         jButton1.setForeground(new Color(0, 153, 0));
-        jButton1.setText("cancel");
+        jButton1.setText("Cancel");
         jButton1.addActionListener(e -> jButton1ActionPerformed(e));
 
         //---- jButton2 ----
@@ -150,19 +155,19 @@ public class patient_registertion extends javax.swing.JFrame {
                                         .addComponent(jLabel4))
                                     .addGap(53, 53, 53)
                                     .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 278, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 278, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 278, GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jTextField1, 300, 300, 300)
+                                        .addComponent(jTextField2, 300, 300, 300)
+                                        .addComponent(jTextField3, 300, 300, 300)))
                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGroup(contentPaneLayout.createParallelGroup()
                                         .addComponent(jLabel5)
-                                        .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
-                                    .addGap(47, 47, 47)
+                                        .addComponent(jLabel6))
+                                    .addGap(46, 46, 46)
                                     .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 373, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 319, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField7, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 423, GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(jTextField5, 300, 300, 300)
+                                        .addComponent(jTextField4, 300, 300, 300)
+                                        .addComponent(jTextField7, 300, 300, 300)
+                                        .addComponent(jTextField6, 300, 300, 300))))))
                     .addContainerGap(49, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
@@ -239,7 +244,23 @@ public class patient_registertion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  
+        Patient p = new Patient(jTextField1.getText(),
+                jTextField2.getText(),
+               Double.parseDouble( jTextField3.getText()),
+                jTextField4.getText(),jTextField5.getText(),
+                jTextField7.getText(),jTextField6.getText(),0
+        );
+   DataManager.addPatient(p);
+
+jTextField1.setText("");
+jTextField2.setText("");
+jTextField3.setText("");
+jTextField4.setText("");
+jTextField5.setText("");
+jTextField6.setText("");
+jTextField7.setText("");
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed

@@ -1,4 +1,6 @@
 package com.company;
+import com.company.model.User;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,17 +11,12 @@ import java.util.Map;
 import java.util.Objects;
 import javax.swing.LayoutStyle;
 
+
 public class LOG_IN extends javax.swing.JFrame {
+
 
     private Map<String, String> loginData = new HashMap<String, String>();
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LOG_IN().setVisible(true);
-            }
-        });
-    }
 
     public boolean is_member() {
 
@@ -42,15 +39,17 @@ public class LOG_IN extends javax.swing.JFrame {
     }
 
     public LOG_IN() {
-        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
+        Image myImage = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("1.jpg"))).getImage();
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
-        loginData.put("amr", "amrelgendy0");
-        loginData.put("mayman", "m1822001");
-        loginData.put("mohamed", "0");
-        loginData.put("magda", "0");
-        loginData.put("fatma", "0");
-        loginData.put("0", "0");
+
+        for (User user: DataManager.users()
+             ) {
+            if(user.isAdmin()){
+                loginData.put(user.getUsername(),user.getPassword());
+
+            }
+        }
         tfp.setText("");
         super.setResizable(false);
     }
@@ -66,28 +65,28 @@ public class LOG_IN extends javax.swing.JFrame {
         tfu = new JTextField();
         can = new JButton();
         btn = new JButton();
-        btn2 = new JButton();
+//        btn2 = new JButton();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBackground(new Color(0, 153, 153));
         setForeground(new Color(0, 204, 255));
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
-        jLabel1.setForeground(new Color(0, 0, 153));
-        jLabel1.setText("WELCOME TO OUR PHARMACY SYSTEM");
+        jLabel1.setForeground(new Color(187, 74, 80));
+        jLabel1.setText("Welcome to our pharmacy system");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel2.setForeground(new Color(0, 0, 153));
-        jLabel2.setText("PASSWORD");
+        jLabel2.setForeground(new Color(23, 36, 100));
+        jLabel2.setText("Password");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel3.setForeground(new Color(0, 0, 153));
-        jLabel3.setText("USER NAME");
+        jLabel3.setForeground(new Color(23, 36, 100));
+        jLabel3.setText("User name");
 
         //---- tfp ----
         tfp.setText("jPasswordField1");
@@ -98,30 +97,30 @@ public class LOG_IN extends javax.swing.JFrame {
 
         //---- can ----
         can.setFont(new Font("Tahoma", Font.BOLD, 18));
-        can.setForeground(new Color(0, 0, 102));
-        can.setText("CANCEL");
+        can.setForeground(new Color(2, 149, 218));
+        can.setText("Cancel");
         can.addActionListener(e -> canActionPerformed(e));
 
         //---- btn ----
         btn.setFont(new Font("Tahoma", Font.BOLD, 18));
-        btn.setForeground(new Color(0, 0, 153));
-        btn.setText("LOG IN");
+        btn.setForeground(new Color(2, 149, 218));
+        btn.setText("Log in");
         btn.addActionListener(e -> btnActionPerformed(e));
 
         //---- btn2 ----
-        btn2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        btn2.setForeground(new Color(0, 0, 153));
-        btn2.setText("credits");
-        btn2.addActionListener(e -> showCredits(e));
+//        btn2.setFont(new Font("Tahoma", Font.BOLD, 18));
+//        btn2.setForeground(new Color(0, 0, 153));
+//        btn2.setText("Credits");
+//        btn2.addActionListener(e -> showCredits(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
                 contentPaneLayout.createParallelGroup()
                         .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                                .addGap(0, 64, Short.MAX_VALUE)
-                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 621, GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))
+                                .addGap(0, 110, Short.MAX_VALUE)
+                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 530, GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                                 .addGroup(contentPaneLayout.createParallelGroup()
                                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -142,9 +141,9 @@ public class LOG_IN extends javax.swing.JFrame {
                                                 .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(contentPaneLayout.createSequentialGroup()
                                                 .addGap(270, 270, 270)
-                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
+//                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(135, Short.MAX_VALUE))
-        );
+        )));
         contentPaneLayout.setVerticalGroup(
                 contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -163,7 +162,7 @@ public class LOG_IN extends javax.swing.JFrame {
                                         .addComponent(btn, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(can, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+//                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
         );
         pack();
@@ -185,27 +184,27 @@ public class LOG_IN extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnActionPerformed
 
-    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-
-
-        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
-
-    }//GEN-LAST:event_btnActionPerformed
-
-    public String textBlocks() {
-        String[] names = new String[]{
-                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
-                "محمد ايمن احمد محمد - جروب ١٢"
-                , "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
-                "محمد امين احمد العزب شلبي - جروب ١٢",
-                "فاطمة خالد قابيل - جروب ١٠",
-        };
-        String data = "";
-        for (String name : names) {
-            data += name + "\n";
-        }
-        return data;
-    }
+//    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
+//
+//
+//        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
+//
+//    }//GEN-LAST:event_btnActionPerformed
+//
+//    public String textBlocks() {
+//        String[] names = new String[]{
+//                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
+//                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
+//                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
+//                "محمد أمين أحمد العزب شلبي - جروب ١٢",
+//                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
+//        };
+//        String data = "";
+//        for (String name : names) {
+//            data += name + "\n";
+//        }
+//        return data;
+//    }
 
 //
 //    private void tfuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfuActionPerformed
@@ -237,4 +236,5 @@ public class LOG_IN extends javax.swing.JFrame {
     public String getPassword() {
         return tfp.getText();
     }
+
 }

@@ -4,8 +4,8 @@ package com.company;/*
  * and open the template in the editor.
  */
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -21,6 +21,7 @@ public class menu1 extends javax.swing.JFrame {
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
         super.setVisible(true);
+        super.setResizable(false);
     }
 
     /**
@@ -35,7 +36,6 @@ public class menu1 extends javax.swing.JFrame {
         jLabel1 = new JLabel();
         jButton2 = new JButton();
         jButton3 = new JButton();
-        jButton5 = new JButton();
         jButton6 = new JButton();
         se = new JButton();
         jButton8 = new JButton();
@@ -47,35 +47,32 @@ public class menu1 extends javax.swing.JFrame {
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 48));
+        jLabel1.setForeground(new Color(187, 74, 80));
         jLabel1.setText("              Pharmacy Menu");
 
         //---- jButton2 ----
-        jButton2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jButton2.setText("Add Medicne");
+        jButton2.setFont(new Font("Tahoma", Font.BOLD, 20));
+        jButton2.setText("Add Medicine");
         jButton2.addActionListener(e -> jButton2ActionPerformed(e));
 
         //---- jButton3 ----
-        jButton3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+        jButton3.setFont(new Font("Tahoma", Font.BOLD , 20));
+        jButton3.setForeground(new Color(2, 149, 218));
         jButton3.setText("Log out");
         jButton3.addActionListener(e -> jButton3ActionPerformed(e));
 
-        //---- jButton5 ----
-        jButton5.setFont(new Font("Tahoma", Font.BOLD, 24));
-        jButton5.setText("Submit Prescription");
-        jButton5.addActionListener(e -> jButton5ActionPerformed(e));
-
         //---- jButton6 ----
-        jButton6.setFont(new Font("Tahoma", Font.BOLD, 18));
+        jButton6.setFont(new Font("Tahoma", Font.BOLD, 20));
         jButton6.setText("View Patient Info");
         jButton6.addActionListener(e -> jButton6ActionPerformed(e));
 
         //---- se ----
-        se.setFont(new Font("Tahoma", Font.BOLD, 24));
-        se.setText("Search Medicne");
+        se.setFont(new Font("Tahoma", Font.BOLD, 20));
+        se.setText("Search Medicine");
         se.addActionListener(e -> seActionPerformed(e));
 
         //---- jButton8 ----
-        jButton8.setFont(new Font("Tahoma", Font.BOLD, 18));
+        jButton8.setFont(new Font("Tahoma", Font.BOLD, 20));
         jButton8.setText("Register Patient");
         jButton8.addActionListener(e -> jButton8ActionPerformed(e));
 
@@ -83,35 +80,40 @@ public class menu1 extends javax.swing.JFrame {
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(se, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
-                    .addGap(39, 39, 39))
-                .addComponent(jButton8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(se, 790, 790, 790)
+                    .addGroup(contentPaneLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(contentPaneLayout.createParallelGroup()
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, 743, Short.MAX_VALUE)
+                                        .addGap(39, 39, 39))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addComponent(jButton8, 780, 780, 780)
+                                        .addContainerGap())
+                                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                                        .addComponent(jButton6, 780, 780, 780)
+                                        .addContainerGap())
+                                .addComponent(jButton2, 780, 780, 780)
+                                .addGap(39, 39, 39)
+                                .addComponent(jButton3, 780, 780, 780)
+                                .addGap(39, 39, 39)))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(se, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jButton8, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jButton6, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                    .addGap(43, 43, 43))
+                        .addContainerGap(19, Short.MAX_VALUE)
+                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(se, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton8, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -119,10 +121,6 @@ public class menu1 extends javax.swing.JFrame {
         //---- jButton4 ----
         jButton4.setText("jButton1");
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new submit_prescription();
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         new patient_info();
@@ -134,7 +132,6 @@ public class menu1 extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
 
-        System.out.println("dsfsddsfdsfsd");
         new patient_registertion();
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -144,7 +141,7 @@ public class menu1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new Drug();
+        new DrugView();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -187,7 +184,6 @@ public class menu1 extends javax.swing.JFrame {
     private JLabel jLabel1;
     private JButton jButton2;
     private JButton jButton3;
-    private JButton jButton5;
     private JButton jButton6;
     private JButton se;
     private JButton jButton8;

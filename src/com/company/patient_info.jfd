@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq {space :p:52:p, comp jLabel1:::p:288:p}, seq l {space :::p, comp jLabel3:::p:134:p, space :p:18:p, comp jTextField2:::p:217:p}, seq l {space :::p, comp jLabel4:::p:134:p, space s:::p, comp jTextField5:::p:217:p}, seq l {space :::p, comp jLabel2:::p:134:p, space s:::p, comp jTextField3:::p:217:p}, seq l {space :p:159:p, comp jButton1:::p:91:p}, seq l {space :::p, par l {comp jLabel5::l:p:134:p, comp jLabel7::l:p:134:p}, space :p:18:p, par l {comp jTextField7:::p:217:p, comp jTextField1:::p:217:p}}, par t:l::p {seq l {comp jLabel8:::p:134:p, space :::x, comp jTextField6:::p:217:p}, seq l {space :::p, comp jLabel6:::p:134:p, space s:::p, comp jTextField4:::p:217:p}}}, space ::68:x}}"
-			"$verticalGroup": "par l {seq l {space :::p, comp jLabel1:::p:33:p, space :p:27:p, par b {comp jLabel2::b:p:28:p, comp jTextField3::b:p:33:p}, space s:::p, par b {comp jLabel4::b:p:28:p, comp jTextField5::b:p:33:p}, space :p:39:p, par b {comp jTextField2::b:p:33:p, comp jLabel3::b:p:28:p}, space :p:24:p, par b {comp jTextField1::b:p:33:p, comp jLabel5::b:p:28:p}, space :p:30:p, par b {comp jTextField7::b:p:33:p, comp jLabel7::b:p:28:p}, space :::p, par b {comp jLabel6::b:p:28:p, comp jTextField4::b:p:33:p}, space s:::p, par b {comp jLabel8::b:p:28:p, comp jTextField6::b:p:33:p}, space :p:76:p, comp jButton1::::33:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:52:p, comp jLabel1:::p:288:p}, seq {space :::p, par l {seq l {comp jLabel2:::p:134:p, space s:::p, comp jTextField3:::p:217:p}, seq l {comp jLabel4:::p:134:p, space s:::p, comp jTextField5:::p:217:p}, seq l {comp jLabel3:::p:134:p, space s:::p, comp jTextField2:::p:217:p}, seq l {comp jLabel5:::p:134:p, space s:::p, comp jTextField1:::p:217:p}, seq l {comp jLabel7:::p:134:p, space s:::p, comp jTextField7:::p:217:p}, seq l {comp jLabel6:::p:134:p, space s:::p, comp jTextField4:::p:217:p}, seq l {space :p:130:p, comp jButton1:::p:91:p}}}, seq l {space :::p, comp jLabel8:::p:134:p, space s:::p, comp jTextField6:::p:217:p}}, space ::34:x, comp scrollPane1::::524:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l {seq {comp scrollPane1:::p:490:p, space :::x}, seq {comp jLabel1:::p:33:p, space :p:27:p, par b {comp jLabel2::b:p:28:p, comp jTextField3::b:p:33:p}, space u:::p, par b {comp jLabel4::b:p:28:p, comp jTextField5::b:p:33:p}, space :p:19:p, par t {comp jLabel3:::p:28:p, comp jTextField2:::p:33:p}, space s:::p, par b {comp jLabel5::b:p:28:p, comp jTextField1::b:p:33:p}, space s:::p, par t {comp jLabel7:::p:28:p, comp jTextField7:::p:33:p}, space s:::p, par b {comp jLabel6::b:p:28:p, comp jTextField4::b:p:33:p}, space s:::p, par b {comp jLabel8::b:p:28:p, comp jTextField6::b:p:33:p}, space :p:33:p, comp jButton1:::::x, space :p:466:p}}}}"
 		} ) {
 			name: "this"
 			"defaultCloseOperation": 2
@@ -14,66 +14,73 @@ new FormModel {
 				name: "jLabel1"
 				"font": new java.awt.Font( "Tahoma", 1, 18 )
 				"foreground": new java.awt.Color( 51, 51, 51, 255 )
-				"text": "         patient information"
+				"text": "         Patient information"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel2"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "first name"
+				"text": "First name"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel3"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "age"
+				"text": "Age"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel4"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "last name"
+				"text": "Last name"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel5"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "prescribe medicne"
+				"text": "Prescribe medicine"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel6"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "doctor"
+				"text": "Doctor"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel7"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "address"
+				"text": "Address"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel8"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "    date"
+				"text": "Date"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField1"
+				"enabled": false
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField1ActionPerformed", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField2"
+				"enabled": false
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField3"
+				"enabled": false
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField4"
+				"enabled": false
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField4ActionPerformed", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField5"
+				"enabled": false
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jTextField5ActionPerformed", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField6"
+				"enabled": false
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField7"
+				"enabled": false
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "jButton1"
@@ -81,8 +88,15 @@ new FormModel {
 				"text": "Exit"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton1ActionPerformed", true ) )
 			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "table1MouseClicked", true ) )
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"size": new java.awt.Dimension( 445, 565 )
+			"size": new java.awt.Dimension( 935, 520 )
 			"location": new java.awt.Point( 0, 0 )
 		} )
 	}

@@ -4,21 +4,38 @@ package com.company;/*
  * and open the template in the editor.
  */
 
+import com.company.model.Drug;
+
 import java.awt.*;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
  * @author MINTESINOT
  */
-public class SEARCH_RESULT extends javax.swing.JFrame {
+public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
+};
+
+    String[] columnNames = {"Name",
+            "Type",
+            "Expire date",
+            "Price",
+            "id"};
     /**
      * Creates new form SEARCH_RESULT
      */
     public SEARCH_RESULT() {
         initComponents();
+        getSearch();
         super.setVisible(true);
+        super.setResizable(false);
     }
 
     /**
@@ -30,22 +47,21 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     // Generated using JFormDesigner Evaluation license - amr elgendy
     private void initComponents() {
-        Image myImage = new ImageIcon(this.getClass().getResource("1.jpg")).getImage();
-        this.setContentPane(new ImagePanel(myImage));
         jLabel1 = new JLabel();
         jTextField1 = new JTextField();
         jButton1 = new JButton();
         jLabel2 = new JLabel();
-        jScrollPane1 = new JScrollPane();
-        jTextArea1 = new JTextArea();
+        scrollPane1 = new JScrollPane();
+        table1 = new JTable();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Search Medicne");
-        Container contentPane = getContentPane();
+        setTitle("Search Medicine");
+        var contentPane = getContentPane();
 
         //---- jLabel1 ----
-        jLabel1.setFont(new Font("Tahoma", Font.ITALIC, 24));
+        jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
+        jLabel1.setForeground(new Color(187, 74, 80));
         jLabel1.setText("      Enter your key");
 
         //---- jButton1 ----
@@ -55,15 +71,15 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 36));
-        jLabel2.setText("       Result");
+        jLabel2.setForeground(new Color(187, 74, 80));
+        jLabel2.setText("Result");
 
-        //======== jScrollPane1 ========
+        //======== scrollPane1 ========
         {
 
-            //---- jTextArea1 ----
-            jTextArea1.setColumns(20);
-            jTextArea1.setRows(5);
-            jScrollPane1.setViewportView(jTextArea1);
+            //---- table1 ----
+            table1.setEnabled(false);
+            scrollPane1.setViewportView(table1);
         }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
@@ -71,23 +87,23 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGroup(contentPaneLayout.createParallelGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 628, GroupLayout.PREFERRED_SIZE)
                         .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 292, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(81, 81, 81)
-                                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 249, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(53, 53, 53)
-                                    .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 327, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(146, 146, 146)
-                                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(21, 21, 21)
-                            .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 402, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 628, GroupLayout.PREFERRED_SIZE)
+                            .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addGroup(contentPaneLayout.createParallelGroup()
+                                    .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addGap(81, 81, 81)
+                                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 249, GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(contentPaneLayout.createSequentialGroup()
+                                        .addGap(146, 146, 146)
+                                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)))
+                                .addGap(304, 304, 304))
+                            .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 327, GroupLayout.PREFERRED_SIZE))))
+                    .addContainerGap(14, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -100,17 +116,50 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
                     .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
                     .addGap(39, 39, 39)
                     .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-                    .addGap(32, 32, 32)
-                    .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                    .addContainerGap())
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(22, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+   getSearch();
+}
+
+void getSearch(){
+    ArrayList<Drug> medicine = DataManager.searchMedicine(jTextField1.getText());
+    table1.setAutoCreateColumnsFromModel(true);
+    DefaultTableModel model = (DefaultTableModel)table1.getModel();
+
+    model.setColumnCount(0);
+
+
+    for(int i = 0 ; i < columnNames.length ; i ++){
+
+        TableColumn col = new TableColumn(model.getColumnCount());
+        col.setHeaderValue(columnNames[i]);
+        table1.addColumn(col);
+
+        ArrayList<Object> toshow = new ArrayList<Object>();
+
+        for(Drug dd : medicine){
+            switch (i) {
+                case 0 -> toshow.add(dd.getName());
+                case 1 -> toshow.add(dd.getType());
+                case 2 -> toshow.add(dd.getExpireDate());
+                case 3 -> toshow.add(dd.getPrice());
+                case 4 -> toshow.add(dd.getId());
+            }
+        }
+        model.addColumn(col.getHeaderValue().toString(), toshow.toArray());
+
+    }
+}
+
+    //GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +202,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
     private JTextField jTextField1;
     private JButton jButton1;
     private JLabel jLabel2;
-    private JScrollPane jScrollPane1;
-    private JTextArea jTextArea1;
+    private JScrollPane scrollPane1;
+    private JTable table1;
     // End of variables declaration//GEN-END:variables
 }

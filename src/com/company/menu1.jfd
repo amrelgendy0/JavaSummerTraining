@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {comp se::l:::x, comp jButton5::l:::x, comp jButton6::l:::x, comp jButton2:::::x, comp jButton3::l:::x, seq {space :::p, comp jLabel1::::743:x, space :p:39:p}, comp jButton8::l:::x}"
-			"$verticalGroup": "par l {seq l {space :::x, comp jLabel1:::p:75:p, space :::p, comp se:::p:60:p, space :::p, comp jButton5:::p:60:p, space :::p, comp jButton8:::p:60:p, space u:::p, comp jButton6:::p:60:p, space u:::p, comp jButton2:::p:60:p, space u:::p, comp jButton3:::p:60:p, space :p:43:p}}"
+			"$horizontalGroup": "par l {comp se::l:::x, seq {space :::p, par l {seq {comp jLabel1::::743:x, space :p:39:p}, seq l {comp jButton8:::::x, space :::p}, seq t {comp jButton6:::::x, space :::p}, comp jButton2::l:::x, comp jButton3::l:::x}}}"
+			"$verticalGroup": "par l {seq l {space ::19:x, comp jLabel1:::p:75:p, space :::p, comp se:::p:60:p, space s:::p, comp jButton8:::p:60:p, space s:::p, comp jButton6:::p:60:p, space u:::p, comp jButton2:::p:60:p, space u:::p, comp jButton3:::p:60:p, space :p:91:p}}"
 		} ) {
 			name: "this"
 			"defaultCloseOperation": 3
@@ -25,12 +25,6 @@ new FormModel {
 				"font": new java.awt.Font( "Tahoma", 3, 18 )
 				"text": "Log out"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton3ActionPerformed", true ) )
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "jButton5"
-				"font": new java.awt.Font( "Tahoma", 1, 24 )
-				"text": "Submit Prescription"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton5ActionPerformed", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "jButton6"

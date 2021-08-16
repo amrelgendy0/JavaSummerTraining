@@ -4,12 +4,12 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {par t {comp jLabel2:::p:292:p, par l {seq {space :p:81:p, comp jLabel1:::p:249:p}, seq l {space :p:53:p, comp jTextField1:::p:327:p}, seq l {space :p:146:p, comp jButton1:::p:150:p}}}, seq l {space :p:21:p, comp jScrollPane1:::p:402:p}}, space :::x}}"
-			"$verticalGroup": "par l {seq l {space :p:24:p, comp jLabel1:::p:38:p, space u:::p, comp jTextField1:::p:48:p, space s:::p, comp jButton1:::p:38:p, space :p:39:p, comp jLabel2:::p:37:p, space :p:32:p, comp jScrollPane1::::134:x, space :::p}}"
+			"$horizontalGroup": "par l {seq l {par t {comp scrollPane1::t:p:628:p, par t {comp jLabel2:::p:292:p, seq {par l {seq {space :p:81:p, comp jLabel1:::p:249:p}, seq l {space :p:146:p, comp jButton1:::p:150:p}}, space :p:304:p}, seq l {space :p:53:p, comp jTextField1:::p:327:p}}}, space ::14:x}}"
+			"$verticalGroup": "par l {seq l {space :p:24:p, comp jLabel1:::p:38:p, space u:::p, comp jTextField1:::p:48:p, space s:::p, comp jButton1:::p:38:p, space :p:39:p, comp jLabel2:::p:37:p, space :::p, comp scrollPane1:::p::p, space ::22:x}}"
 		} ) {
 			name: "this"
 			"defaultCloseOperation": 2
-			"title": "Search Medicne"
+			"title": "Search Medicine"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel1"
 				"font": new java.awt.Font( "Tahoma", 2, 24 )
@@ -30,15 +30,14 @@ new FormModel {
 				"text": "       Result"
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-				name: "jScrollPane1"
-				add( new FormComponent( "javax.swing.JTextArea" ) {
-					name: "jTextArea1"
-					"columns": 20
-					"rows": 5
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+					"enabled": false
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"size": new java.awt.Dimension( 570, 450 )
+			"size": new java.awt.Dimension( 650, 735 )
 			"location": new java.awt.Point( 0, 0 )
 		} )
 	}
