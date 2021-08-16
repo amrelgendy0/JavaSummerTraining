@@ -7,7 +7,7 @@ class Main2 {
     public static void main(String[] args) {
         JFrame j = new FirstChoice("Pharmacy App");
         j.setVisible(true);
-        j.setSize(400, 300);
+        j.setSize(500, 300);
         j.setLocationRelativeTo(null);
         j.getContentPane().setBackground(Color.white);
     }

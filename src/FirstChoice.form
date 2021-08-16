@@ -16,7 +16,8 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="JetBrains Mono ExtraBold" size="22" style="3"/>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
           <foreground color="-14011758"/>
           <hideActionText value="false"/>
           <text value="Admin"/>
@@ -28,7 +29,8 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font name="JetBrains Mono ExtraBold" size="22" style="3"/>
+          <enabled value="true"/>
+          <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
           <foreground color="-14011758"/>
           <hideActionText value="false"/>
           <text value="Customer"/>
@@ -41,9 +43,10 @@
         </constraints>
         <properties>
           <enabled value="true"/>
-          <font name="JetBrains Mono ExtraBold" size="18" style="3"/>
-          <foreground color="-14011758"/>
+          <font name="JetBrains Mono ExtraBold" size="18" style="0"/>
+          <foreground color="-16554282"/>
           <text value="Credits"/>
+          <toolTipText value="Summer project team members' name"/>
         </properties>
       </component>
       <component id="53839" class="javax.swing.JLabel">
@@ -53,7 +56,7 @@
         <properties>
           <enabled value="true"/>
           <font name="JetBrains Mono ExtraBold" size="20" style="1"/>
-          <foreground color="-14011758"/>
+          <foreground color="-14254031"/>
           <text value="Welcome to pharmacy"/>
         </properties>
       </component>
