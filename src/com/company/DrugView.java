@@ -15,6 +15,7 @@ public class DrugView extends javax.swing.JFrame {
         initComponents();
 
         super.setVisible(true);
+        super.setResizable(false);
 //              java.awt.EventQueue.invokeLater(new Runnable() {
 //            @Override
 //            public void run() {
@@ -46,7 +47,7 @@ public class DrugView extends javax.swing.JFrame {
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Add Medicne");
+        setTitle("Add Medicine");
         Container contentPane = getContentPane();
 
         //======== pan ========
@@ -61,13 +62,13 @@ public class DrugView extends javax.swing.JFrame {
 
             //---- jLabel1 ----
             jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
-            jLabel1.setForeground(new Color(51, 0, 255));
-            jLabel1.setText("    DRUG REGISTERTION");
+            jLabel1.setForeground(new Color(187, 74, 80));
+            jLabel1.setText("Drug Registration");
 
             //---- jLabel2 ----
             jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 18));
             jLabel2.setForeground(new Color(0, 0, 153));
-            jLabel2.setText("drug type");
+            jLabel2.setText("Drug type");
 
             //---- jLabel3 ----
             jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -82,17 +83,17 @@ public class DrugView extends javax.swing.JFrame {
             //---- jLabel5 ----
             jLabel5.setFont(new Font("Tahoma", Font.PLAIN, 18));
             jLabel5.setForeground(new Color(0, 0, 153));
-            jLabel5.setText("shelf no");
+            jLabel5.setText("Shelf no.");
 
             //---- jLabel6 ----
             jLabel6.setFont(new Font("Tahoma", Font.PLAIN, 18));
             jLabel6.setForeground(new Color(0, 0, 153));
-            jLabel6.setText("Ex.date");
+            jLabel6.setText("Ex. date");
 
             //---- jLabel7 ----
             jLabel7.setFont(new Font("Tahoma", Font.PLAIN, 18));
             jLabel7.setForeground(new Color(0, 0, 153));
-            jLabel7.setText("drug id");
+            jLabel7.setText("Drug id");
 
             //---- jTextField1 ----
             jTextField1.addActionListener(e -> jTextField1ActionPerformed(e));
@@ -106,13 +107,13 @@ public class DrugView extends javax.swing.JFrame {
             //---- jButton1 ----
             jButton1.setFont(new Font("Tahoma", Font.BOLD, 18));
             jButton1.setForeground(new Color(0, 0, 153));
-            jButton1.setText("register");
+            jButton1.setText("Register");
             jButton1.addActionListener(e -> jButton1ActionPerformed(e));
 
             //---- jButton2 ----
             jButton2.setFont(new Font("Tahoma", Font.BOLD, 18));
             jButton2.setForeground(new Color(0, 0, 153));
-            jButton2.setText("cancel");
+            jButton2.setText("Cancel");
             jButton2.addActionListener(e -> jButton2ActionPerformed(e));
 
             GroupLayout panLayout = new GroupLayout(pan);
@@ -158,14 +159,17 @@ public class DrugView extends javax.swing.JFrame {
                                         .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
                                 .addGap(59, 59, 59))
                             .addGroup(panLayout.createSequentialGroup()
-                                .addGap(139, 139, 139)
+                                .addGap(50, 50, 50)
                                 .addComponent(jButton1)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)))
+                                .addComponent(jButton2)
+                                    .addGap(90, 90, 90)
+
+                            ))
                         .addContainerGap(194, Short.MAX_VALUE))
                     .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
-                        .addGap(0, 167, Short.MAX_VALUE)
-                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 356, GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 120, Short.MAX_VALUE)
+                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 225, GroupLayout.PREFERRED_SIZE)
                         .addGap(150, 150, 150))
             );
             panLayout.setVerticalGroup(
@@ -204,7 +208,7 @@ public class DrugView extends javax.swing.JFrame {
                         .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton2)
                             .addComponent(jButton1))
-                        .addGap(101, 101, 101))
+                        .addGap(0, 0, 0))
             );
         }
 
@@ -212,11 +216,11 @@ public class DrugView extends javax.swing.JFrame {
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(pan, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pan, GroupLayout.Alignment.TRAILING, 450, 450, 450)
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(pan, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pan, GroupLayout.Alignment.TRAILING, 420, 420, 420)
         );
         pack();
         setLocationRelativeTo(getOwner());

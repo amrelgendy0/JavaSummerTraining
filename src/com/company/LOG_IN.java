@@ -75,17 +75,17 @@ public class LOG_IN extends javax.swing.JFrame {
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
-        jLabel1.setForeground(new Color(0, 0, 153));
+        jLabel1.setForeground(new Color(187, 74, 80));
         jLabel1.setText("Welcome to our pharmacy system");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel2.setForeground(new Color(0, 0, 153));
+        jLabel2.setForeground(new Color(23, 36, 100));
         jLabel2.setText("Password");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel3.setForeground(new Color(0, 0, 153));
+        jLabel3.setForeground(new Color(23, 36, 100));
         jLabel3.setText("User name");
 
         //---- tfp ----
@@ -97,13 +97,13 @@ public class LOG_IN extends javax.swing.JFrame {
 
         //---- can ----
         can.setFont(new Font("Tahoma", Font.BOLD, 18));
-        can.setForeground(new Color(0, 0, 102));
+        can.setForeground(new Color(2, 149, 218));
         can.setText("Cancel");
         can.addActionListener(e -> canActionPerformed(e));
 
         //---- btn ----
         btn.setFont(new Font("Tahoma", Font.BOLD, 18));
-        btn.setForeground(new Color(0, 0, 153));
+        btn.setForeground(new Color(2, 149, 218));
         btn.setText("Log in");
         btn.addActionListener(e -> btnActionPerformed(e));
 
@@ -118,9 +118,9 @@ public class LOG_IN extends javax.swing.JFrame {
         contentPaneLayout.setHorizontalGroup(
                 contentPaneLayout.createParallelGroup()
                         .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                                .addGap(0, 64, Short.MAX_VALUE)
-                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 621, GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))
+                                .addGap(0, 110, Short.MAX_VALUE)
+                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 530, GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                                 .addGroup(contentPaneLayout.createParallelGroup()
                                         .addGroup(contentPaneLayout.createSequentialGroup()

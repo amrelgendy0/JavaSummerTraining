@@ -18,7 +18,7 @@
         <properties>
           <enabled value="true"/>
           <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
-          <foreground color="-14011758"/>
+          <foreground color="-12483986"/>
           <hideActionText value="false"/>
           <text value="Admin"/>
           <toolTipText value="Modify pharmacy medicine and patients!"/>
@@ -31,7 +31,7 @@
         <properties>
           <enabled value="true"/>
           <font name="JetBrains Mono ExtraBold" size="24" style="1"/>
-          <foreground color="-14011758"/>
+          <foreground color="-12483986"/>
           <hideActionText value="false"/>
           <text value="Customer"/>
           <toolTipText value="Ready to order, Click here!"/>
@@ -56,7 +56,7 @@
         <properties>
           <enabled value="true"/>
           <font name="JetBrains Mono ExtraBold" size="20" style="1"/>
-          <foreground color="-14254031"/>
+          <foreground color="-4502960"/>
           <text value="Welcome to pharmacy"/>
         </properties>
       </component>

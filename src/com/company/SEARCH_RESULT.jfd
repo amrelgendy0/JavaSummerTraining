@@ -9,7 +9,7 @@ new FormModel {
 		} ) {
 			name: "this"
 			"defaultCloseOperation": 2
-			"title": "Search Medicne"
+			"title": "Search Medicine"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel1"
 				"font": new java.awt.Font( "Tahoma", 2, 24 )

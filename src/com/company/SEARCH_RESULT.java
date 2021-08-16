@@ -23,10 +23,10 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
 };
 
-    String[] columnNames = {"name",
-            "tybe",
-            "expire date",
-            "price",
+    String[] columnNames = {"Name",
+            "Type",
+            "Expire date",
+            "Price",
             "id"};
     /**
      * Creates new form SEARCH_RESULT
@@ -35,6 +35,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
         initComponents();
         getSearch();
         super.setVisible(true);
+        super.setResizable(false);
     }
 
     /**
@@ -55,11 +56,12 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Search Medicne");
+        setTitle("Search Medicine");
         var contentPane = getContentPane();
 
         //---- jLabel1 ----
-        jLabel1.setFont(new Font("Tahoma", Font.ITALIC, 24));
+        jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
+        jLabel1.setForeground(new Color(187, 74, 80));
         jLabel1.setText("      Enter your key");
 
         //---- jButton1 ----
@@ -69,7 +71,8 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 36));
-        jLabel2.setText("       Result");
+        jLabel2.setForeground(new Color(187, 74, 80));
+        jLabel2.setText("Result");
 
         //======== scrollPane1 ========
         {
@@ -87,7 +90,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                         .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 628, GroupLayout.PREFERRED_SIZE)
                         .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 292, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 628, GroupLayout.PREFERRED_SIZE)
                             .addGroup(contentPaneLayout.createSequentialGroup()
                                 .addGroup(contentPaneLayout.createParallelGroup()
                                     .addGroup(contentPaneLayout.createSequentialGroup()

@@ -57,7 +57,7 @@ public class patient_info extends javax.swing.JFrame {
         model.setColumnCount(0);
         for(int i = 0 ; i < 1 ; i ++){
             TableColumn col = new TableColumn(model.getColumnCount());
-            col.setHeaderValue("Pathient Full Name");
+            col.setHeaderValue("Patient Full Name");
             table1.addColumn(col);
             ArrayList<Object> toshow = new ArrayList<Object>();
 
@@ -69,6 +69,7 @@ public class patient_info extends javax.swing.JFrame {
         }
 
         super.setVisible(true);
+        super.setResizable(false);
     }
 
     /**
@@ -106,36 +107,36 @@ public class patient_info extends javax.swing.JFrame {
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel1.setForeground(new Color(51, 51, 51));
-        jLabel1.setText("         patient information");
+        jLabel1.setForeground(new Color(187, 74, 80));
+        jLabel1.setText("         Patient information");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel2.setText("first name");
+        jLabel2.setText("First name");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel3.setText("age");
+        jLabel3.setText("Age");
 
         //---- jLabel4 ----
         jLabel4.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel4.setText("last name");
+        jLabel4.setText("Last name");
 
         //---- jLabel5 ----
         jLabel5.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel5.setText("prescribe medicne");
+        jLabel5.setText("Prescribe medicine");
 
         //---- jLabel6 ----
         jLabel6.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel6.setText("doctor");
+        jLabel6.setText("Doctor");
 
         //---- jLabel7 ----
         jLabel7.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel7.setText("address");
+        jLabel7.setText("Address");
 
         //---- jLabel8 ----
         jLabel8.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel8.setText("date");
+        jLabel8.setText("Date");
 
         //---- jTextField1 ----
         jTextField1.setEnabled(false);
@@ -266,7 +267,7 @@ public class patient_info extends javax.swing.JFrame {
                                 .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
                             .addGap(33, 33, 33)
                             .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(466, 466, 466))))
+                            .addGap(0, 50, 50))))
         );
         pack();
         setLocationRelativeTo(getOwner());

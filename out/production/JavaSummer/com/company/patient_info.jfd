@@ -14,42 +14,42 @@ new FormModel {
 				name: "jLabel1"
 				"font": new java.awt.Font( "Tahoma", 1, 18 )
 				"foreground": new java.awt.Color( 51, 51, 51, 255 )
-				"text": "         patient information"
+				"text": "         Patient information"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel2"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "first name"
+				"text": "First name"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel3"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "age"
+				"text": "Age"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel4"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "last name"
+				"text": "Last name"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel5"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "prescribe medicne"
+				"text": "Prescribe medicine"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel6"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "doctor"
+				"text": "Doctor"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel7"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "address"
+				"text": "Address"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "jLabel8"
 				"font": new java.awt.Font( "Tahoma", 1, 14 )
-				"text": "date"
+				"text": "Date"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "jTextField1"
