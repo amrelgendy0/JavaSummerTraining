@@ -1,3 +1,7 @@
+import com.company.DrugView;
+import com.company.LOG_IN;
+import com.company.DataManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -5,25 +9,25 @@ import java.awt.event.ActionListener;
 
 class Main2 {
     public static void main(String[] args) {
-        JFrame j = new FirstChoice("Pharmacy App");
-        j.setVisible(true);
-        j.setSize(500, 300);
-        j.setLocationRelativeTo(null);
-        j.getContentPane().setBackground(Color.white);
+        JFrame FirstChoiceFrame = new FirstChoice("Pharmacy App");
+        FirstChoiceFrame.setVisible(true);
+        FirstChoiceFrame.setSize(500, 300);
+        FirstChoiceFrame.setLocationRelativeTo(null);
+        FirstChoiceFrame.getContentPane().setBackground(Color.white);
     }
 }
+
 public class FirstChoice extends JFrame {
     private JPanel FirstChoice;
     private JButton customerButton;
     private JButton adminButton;
     private JButton creditsButton;
 
-    public FirstChoice (String title) {
+    public FirstChoice(String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(FirstChoice);
         this.pack();
-
 
 
         // Here
@@ -35,15 +39,11 @@ public class FirstChoice extends JFrame {
         });
 
         //Here
-        adminButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            }
-        });
+        adminButton.addActionListener(e -> adminButtonActionPerformed(e));
         creditsButton.addActionListener(e -> showCredits(e));
 
+    };
 
-        };
     private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
 
 
@@ -65,7 +65,18 @@ public class FirstChoice extends JFrame {
         }
         return data;
     }
+
+
+    private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        DataManager.initDataBase();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LOG_IN().setVisible(true);
+            }
+        });
+        this.dispose();
     }
+}
 
 
 

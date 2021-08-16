@@ -14,6 +14,7 @@ import javax.swing.LayoutStyle;
 
 public class LOG_IN extends javax.swing.JFrame {
 
+
     private Map<String, String> loginData = new HashMap<String, String>();
 
 
