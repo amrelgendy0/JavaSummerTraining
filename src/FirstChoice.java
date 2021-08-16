@@ -1,21 +1,8 @@
-import com.company.DrugView;
 import com.company.LOG_IN;
 import com.company.DataManager;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-class Main2 {
-    public static void main(String[] args) {
-        JFrame FirstChoiceFrame = new FirstChoice("Pharmacy App");
-        FirstChoiceFrame.setVisible(true);
-        FirstChoiceFrame.setSize(500, 300);
-        FirstChoiceFrame.setLocationRelativeTo(null);
-        FirstChoiceFrame.getContentPane().setBackground(Color.white);
-    }
-}
 
 public class FirstChoice extends JFrame {
     private JPanel FirstChoice;
@@ -23,32 +10,23 @@ public class FirstChoice extends JFrame {
     private JButton adminButton;
     private JButton creditsButton;
 
-    public FirstChoice(String title) {
-        super(title);
+    public FirstChoice() {
+        super("Pharmacy App");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(FirstChoice);
         this.pack();
-
-
-        // Here
-        customerButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-        //Here
+        customerButton.addActionListener(e -> customerButtonActionPerformed(e));
         adminButton.addActionListener(e -> adminButtonActionPerformed(e));
         creditsButton.addActionListener(e -> showCredits(e));
-
-    };
+        super.setVisible(true);
+        super.setSize(500, 300);
+        super.setLocationRelativeTo(null);
+        super.getContentPane().setBackground(Color.white);
+//        super.setResizable(false);
+    }
 
     private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-
-
         JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
-
     }//GEN-LAST:event_btnActionPerformed
 
     public String textBlocks() {
@@ -66,7 +44,6 @@ public class FirstChoice extends JFrame {
         return data;
     }
 
-
     private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {
         DataManager.initDataBase();
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -76,7 +53,14 @@ public class FirstChoice extends JFrame {
         });
         this.dispose();
     }
+
+    private void customerButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        DataManager.initDataBase();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Customer();
+            }
+        });
+        this.dispose();
+    }
 }
-
-
-
