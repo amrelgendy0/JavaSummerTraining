@@ -3,6 +3,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+class Main2 {
+    public static void main(String[] args) {
+        JFrame j = new FirstChoice("Select option");
+        j.setVisible(true);
+        j.setSize(300, 300);
+        j.setLocationRelativeTo(null);
+        j.getContentPane().setBackground(Color.white);
+    }
+}
 public class FirstChoice extends JFrame {
     private JPanel FirstChoice;
     private JButton customerButton;
@@ -31,11 +40,5 @@ public class FirstChoice extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
-        JFrame j=new FirstChoice("Select option");
-        j.setVisible(true);
-        j.setSize(300,300);
-        j.setLocationRelativeTo(null);
-        j.getContentPane().setBackground(Color.white);
-    }
+
 }
