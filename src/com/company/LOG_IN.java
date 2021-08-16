@@ -97,19 +97,19 @@ public class LOG_IN extends javax.swing.JFrame {
         //---- can ----
         can.setFont(new Font("Tahoma", Font.BOLD, 18));
         can.setForeground(new Color(0, 0, 102));
-        can.setText("CANCEL");
+        can.setText("Cancel");
         can.addActionListener(e -> canActionPerformed(e));
 
         //---- btn ----
         btn.setFont(new Font("Tahoma", Font.BOLD, 18));
         btn.setForeground(new Color(0, 0, 153));
-        btn.setText("LOG IN");
+        btn.setText("Log in");
         btn.addActionListener(e -> btnActionPerformed(e));
 
         //---- btn2 ----
         btn2.setFont(new Font("Tahoma", Font.BOLD, 18));
         btn2.setForeground(new Color(0, 0, 153));
-        btn2.setText("credits");
+        btn2.setText("Credits");
         btn2.addActionListener(e -> showCredits(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
@@ -193,10 +193,10 @@ public class LOG_IN extends javax.swing.JFrame {
     public String textBlocks() {
         String[] names = new String[]{
                 "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
-                "محمد ايمن احمد محمد - جروب ١٢"
-                , "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
-                "محمد امين احمد العزب شلبي - جروب ١٢",
-                "فاطمة خالد قابيل - جروب ١٠",
+                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
+                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
+                "محمد أمين أحمد العزب شلبي - جروب ١٢",
+                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
         };
         String data = "";
         for (String name : names) {
