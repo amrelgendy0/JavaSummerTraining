@@ -75,17 +75,17 @@ public class LOG_IN extends javax.swing.JFrame {
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
         jLabel1.setForeground(new Color(0, 0, 153));
-        jLabel1.setText("WELCOME TO OUR PHARMACY SYSTEM");
+        jLabel1.setText("Welcome to our pharmacy system");
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 18));
         jLabel2.setForeground(new Color(0, 0, 153));
-        jLabel2.setText("PASSWORD");
+        jLabel2.setText("Password");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 18));
         jLabel3.setForeground(new Color(0, 0, 153));
-        jLabel3.setText("USER NAME");
+        jLabel3.setText("User name");
 
         //---- tfp ----
         tfp.setText("jPasswordField1");

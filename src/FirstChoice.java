@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 class Main2 {
     public static void main(String[] args) {
-        JFrame j = new FirstChoice("Select option");
+        JFrame j = new FirstChoice("Pharmacy App");
         j.setVisible(true);
         j.setSize(400, 300);
         j.setLocationRelativeTo(null);

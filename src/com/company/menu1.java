@@ -50,7 +50,7 @@ public class menu1 extends javax.swing.JFrame {
 
         //---- jButton2 ----
         jButton2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jButton2.setText("Add Medicne");
+        jButton2.setText("Add Medicine");
         jButton2.addActionListener(e -> jButton2ActionPerformed(e));
 
         //---- jButton3 ----
@@ -65,7 +65,7 @@ public class menu1 extends javax.swing.JFrame {
 
         //---- se ----
         se.setFont(new Font("Tahoma", Font.BOLD, 24));
-        se.setText("Search Medicne");
+        se.setText("Search Medicine");
         se.addActionListener(e -> seActionPerformed(e));
 
         //---- jButton8 ----
