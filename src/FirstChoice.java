@@ -7,7 +7,7 @@ class Main2 {
     public static void main(String[] args) {
         JFrame j = new FirstChoice("Select option");
         j.setVisible(true);
-        j.setSize(300, 300);
+        j.setSize(400, 300);
         j.setLocationRelativeTo(null);
         j.getContentPane().setBackground(Color.white);
     }
@@ -16,6 +16,8 @@ public class FirstChoice extends JFrame {
     private JPanel FirstChoice;
     private JButton customerButton;
     private JButton adminButton;
+    private JButton creditsButton;
+
     public FirstChoice (String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,7 +40,32 @@ public class FirstChoice extends JFrame {
             public void actionPerformed(ActionEvent e) {
             }
         });
+        creditsButton.addActionListener(e -> showCredits(e));
+
+
+        };
+    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
+
+
+        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
+
+    }//GEN-LAST:event_btnActionPerformed
+
+    public String textBlocks() {
+        String[] names = new String[]{
+                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
+                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
+                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
+                "محمد أمين أحمد العزب شلبي - جروب ١٢",
+                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
+        };
+        String data = "";
+        for (String name : names) {
+            data += name + "\n";
+        }
+        return data;
+    }
     }
 
 
-}
+

@@ -64,7 +64,7 @@ public class LOG_IN extends javax.swing.JFrame {
         tfu = new JTextField();
         can = new JButton();
         btn = new JButton();
-        btn2 = new JButton();
+//        btn2 = new JButton();
 
         //======== this ========
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -107,10 +107,10 @@ public class LOG_IN extends javax.swing.JFrame {
         btn.addActionListener(e -> btnActionPerformed(e));
 
         //---- btn2 ----
-        btn2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        btn2.setForeground(new Color(0, 0, 153));
-        btn2.setText("Credits");
-        btn2.addActionListener(e -> showCredits(e));
+//        btn2.setFont(new Font("Tahoma", Font.BOLD, 18));
+//        btn2.setForeground(new Color(0, 0, 153));
+//        btn2.setText("Credits");
+//        btn2.addActionListener(e -> showCredits(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -140,9 +140,9 @@ public class LOG_IN extends javax.swing.JFrame {
                                                 .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(contentPaneLayout.createSequentialGroup()
                                                 .addGap(270, 270, 270)
-                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
+//                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(135, Short.MAX_VALUE))
-        );
+        )));
         contentPaneLayout.setVerticalGroup(
                 contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -161,7 +161,7 @@ public class LOG_IN extends javax.swing.JFrame {
                                         .addComponent(btn, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(can, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+//                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
         );
         pack();
@@ -183,27 +183,27 @@ public class LOG_IN extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnActionPerformed
 
-    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-
-
-        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
-
-    }//GEN-LAST:event_btnActionPerformed
-
-    public String textBlocks() {
-        String[] names = new String[]{
-                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
-                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
-                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
-                "محمد أمين أحمد العزب شلبي - جروب ١٢",
-                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
-        };
-        String data = "";
-        for (String name : names) {
-            data += name + "\n";
-        }
-        return data;
-    }
+//    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
+//
+//
+//        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
+//
+//    }//GEN-LAST:event_btnActionPerformed
+//
+//    public String textBlocks() {
+//        String[] names = new String[]{
+//                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
+//                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
+//                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
+//                "محمد أمين أحمد العزب شلبي - جروب ١٢",
+//                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
+//        };
+//        String data = "";
+//        for (String name : names) {
+//            data += name + "\n";
+//        }
+//        return data;
+//    }
 
 //
 //    private void tfuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfuActionPerformed
