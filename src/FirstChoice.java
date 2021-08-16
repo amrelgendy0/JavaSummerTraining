@@ -4,13 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FirstChoice extends JFrame {
-    public static void main(String[] args) {
-        JFrame j=new FirstChoice("Select option");
-        j.setVisible(true);
-        j.setSize(300,300);
-        j.setLocationRelativeTo(null);
-        j.getContentPane().setBackground(Color.white);
-    }
     private JPanel FirstChoice;
     private JButton customerButton;
     private JButton adminButton;
@@ -36,5 +29,13 @@ public class FirstChoice extends JFrame {
             public void actionPerformed(ActionEvent e) {
             }
         });
+    }
+
+    public static void main(String[] args) {
+        JFrame j=new FirstChoice("Select option");
+        j.setVisible(true);
+        j.setSize(300,300);
+        j.setLocationRelativeTo(null);
+        j.getContentPane().setBackground(Color.white);
     }
 }
