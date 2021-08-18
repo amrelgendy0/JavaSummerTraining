@@ -7,6 +7,7 @@ import com.company.model.User;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class DataManager {
     private static final ArrayList<User> users = new ArrayList<User>();
@@ -80,10 +81,9 @@ public class DataManager {
     }
 
     public static ArrayList<Drug> searchMedicine(String key) {
-        getDrug();
         ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
         for (Drug drug : drugs) {
-            if (drug.values().contains(key)) {
+            if (drug.values().toLowerCase(Locale.ENGLISH).contains(key.toLowerCase(Locale.ENGLISH))) {
                 searchedDrug.add(drug);
             }
         }

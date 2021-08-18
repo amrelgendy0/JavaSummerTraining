@@ -6,7 +6,6 @@ import com.company.model.User;
 
 public class StaticDataIfSqlServerNotFound {
 
-
     static User[] getUsers() {
         return new User[]{
                 new User("0", "0", true),
@@ -15,8 +14,6 @@ public class StaticDataIfSqlServerNotFound {
                 new User("magda", "0", true),
                 new User("fatma", "0", true),
         };
-
-
     }
 
     static Drug[] getDrugs() {
