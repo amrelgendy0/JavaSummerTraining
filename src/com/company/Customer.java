@@ -50,7 +50,7 @@ public class Customer extends JFrame {
         super.setVisible(true);
         super.setLocationRelativeTo(null);
         super.getContentPane().setBackground(Color.white);
-//        this.setResizable(false);
+        this.setResizable(false);
 
     }
 

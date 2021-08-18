@@ -47,6 +47,7 @@ public class Thanks extends JFrame {
         tableModel1.addColumn("Quantity", getQuantity(order));
         label9.setText(order.getTotalPrice());
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        super.setResizable(false);
     }
 
     public Object[] getNames(Order order) {

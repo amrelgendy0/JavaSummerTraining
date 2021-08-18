@@ -25,10 +25,10 @@ public class FirstChoice extends JFrame {
         adminButton.addActionListener(e -> adminButtonActionPerformed(e));
         creditsButton.addActionListener(e -> showCredits(e));
         super.setVisible(true);
-        super.setSize(500, 500);
+        super.setSize(515, 445);
         super.setLocationRelativeTo(null);
         super.getContentPane().setBackground(Color.white);
-//        super.setResizable(false);
+        super.setResizable(false);
     }
 
     private void showCredits(ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
