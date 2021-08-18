@@ -25,7 +25,7 @@ public class FirstChoice extends JFrame {
         adminButton.addActionListener(e -> adminButtonActionPerformed(e));
         creditsButton.addActionListener(e -> showCredits(e));
         super.setVisible(true);
-        super.setSize(515, 445);
+        super.setSize(505, 435);
         super.setLocationRelativeTo(null);
         super.getContentPane().setBackground(Color.white);
         super.setResizable(false);

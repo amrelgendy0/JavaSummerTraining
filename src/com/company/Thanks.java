@@ -71,7 +71,6 @@ public class Thanks extends JFrame {
     }
 
     private void okButtonActionPerformed(ActionEvent e) {
-
         this.dispose();
     }
 
@@ -120,7 +119,6 @@ public class Thanks extends JFrame {
 
             //======== contentPanel ========
             {
-
                 //---- label1 ----
                 label1.setText("We Have Received Your Order And Will Be Ready Soon");
                 label1.setFont(label1.getFont().deriveFont(label1.getFont().getStyle() | Font.BOLD, label1.getFont().getSize() + 5f));
@@ -147,9 +145,7 @@ public class Thanks extends JFrame {
                 textField3.setEnabled(false);
 
                 //======== scrollPane2 ========
-                {
-                    scrollPane2.setViewportView(table1);
-                }
+                scrollPane2.setViewportView(table1);
 
                 //---- label8 ----
                 label8.setText("Total Price :");
