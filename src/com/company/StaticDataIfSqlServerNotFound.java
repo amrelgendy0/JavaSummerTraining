@@ -11,7 +11,7 @@ public class StaticDataIfSqlServerNotFound {
         return new User[]{
                 new User("0", "0", true),
                 new User("amr", "Amr@2020", true),
-                new User("m1822001", "mayman", true),
+                new User("ayman", "a_2001", true),
                 new User("magda", "0", true),
                 new User("fatma", "0", true),
         };
@@ -51,10 +51,31 @@ public class StaticDataIfSqlServerNotFound {
 
     static Patient[] getPatients() {
         return new Patient[]{
-
+                new Patient("Zarah", "Pound", 20, "SkinMedica TNS Ultimate Daily Moisturizer Sunscreen SPF20 ", "50 Longview Road", "Zarah Pound", "15/05/2021", 3),
+                new Patient("Yulma", "Bondar", 33, "Premier Value Arthritis 8 Hour", "6657 Mallory Circle", "Yulma Bondar", "01/03/2020", 4),
+                new Patient("Rene", "Leatherbarrow", 67, "Modesa", "17523 Burrows Hill", "Rene Leatherbarrow", "26/12/2019", 5),
+                new Patient("Berri", "Melarkey", 47, "Cold and Hot Medicated", "1 Summit Junction", "Berri Melarkey", "26/10/2018", 6),
+                new Patient("Almeta", "Mahody", 65, "CALIFORNIA NATUREL LIP BALM", "772 Bellgrove Plaza", "Almeta Mahody", "22/12/2020", 7),
+                new Patient("Arnie", "Rains", 91, "Oxygen", "71 Drewry Way", "Arnie Rains", "03/05/2020", 8),
+                new Patient("Clair", "Downe", 77, "Yellow Dock", "3270 Eggendart Point", "Clair Downe", "18/05/2021", 9),
+                new Patient("Erick", "Ruspine", 20, "Ranitidine Hydrochloride", "85 David Court", "Erick Ruspine", "11/11/2020", 10),
+                new Patient("Corbie", "Vasyunkin", 55, "Sun Essential", "528 International Parkway", "Corbie Vasyunkin", "23/11/2020", 11),
+                new Patient("Jayme", "Jinkinson", 72, "Citalopram", "25253 Sauthoff Parkway", "Jayme Jinkinson", "09/06/2019", 12),
+                new Patient("Dolorita", "Haller", 91, "Buspirone HCl", "1585 Thackeray Plaza", "Dolorita Haller", "13/04/2021", 13),
+                new Patient("Dietrich", "Renison", 80, "Levocarnitine", "554 Golf View Parkway", "Dietrich Renison", "06/03/2019", 14),
+                new Patient("Trent", "Keeping", 57, "Benzoin Compound Tincture Professional Pack", "89 Nobel Avenue", "Trent Keeping", "20/04/2021", 15),
+                new Patient("Danya", "Maude", 40, "Omeprazole", "400 Brickson Park Point", "Danya Maude", "14/02/2020", 16),
+                new Patient("Pernell", "Aronstein", 75, "3M Avagard Instant Hand Antiseptic with Moisturizers", "99 Old Shore Crossing", "Pernell Aronstein", "04/03/2020", 17),
+                new Patient("Emlynne", "Skull", 28, "CARBAMAZEPINE", "6 Pankratz Trail", "Emlynne Skull", "02/12/2020", 18),
+                new Patient("Lissy", "Frame", 5, "Papaverine Hydrochloride", "880 Crest Line Lane", "Lissy Frame", "09/12/2020", 19),
+                new Patient("Harwilll", "Tant", 79, "Hydrocodone Bitartrate And Acetaminophen", "1413 Calypso Trail", "Harwilll Tant", "16/01/2020", 20),
+                new Patient("Noam", "Bance", 59, "advanced firming and anti wrinkle", "55 Mcbride Junction", "Noam Bance", "16/12/2019", 21),
+                new Patient("Monte", "Coffee", 94, "CENTER-AL - FESTUCA PRATENSIS POLLEN", "6766 Meadow Vale Court", "Monte Coffee", "15/01/2019", 22),
+                new Patient("Farlie", "Ironmonger", 29, "Algenist", "315 Trailsway Alley", "Farlie Ironmonger", "09/04/2021", 23),
+                new Patient("Petra", "Lamberteschi", 83, "CEFAZOLIN", "3 Green Ridge Hill", "Petra Lamberteschi", "12/02/2020", 24),
+                new Patient("Jimmie", "Sarle", 18, "ADSOL Red Cell Preservation Solution System in Plastic Container (PL 146 Plastic)", "3735 Schiller Center", "Jimmie Sarle", "25/05/2019", 25),
+                new Patient("Ilaire", "Pacitti", 21, "Quality Choice", "967 Mcguire Point", "Ilaire Pacitti", "10/09/2019", 26),
+                new Patient("Lucius", "Benton", 71, "Ultra-TechneKow", "33 Anhalt Lane", "Lucius Benton", "08/01/2020", 27),
         };
-
-
     }
-
 }
