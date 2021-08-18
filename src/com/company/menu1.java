@@ -6,11 +6,6 @@ package com.company;/*
 
 import javax.swing.*;
 import java.awt.*;
-
-/**
- *
- * @author MINTESINOT
- */
 public class menu1 extends javax.swing.JFrame {
 
     /**

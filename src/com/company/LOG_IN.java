@@ -1,21 +1,19 @@
 package com.company;
+
 import com.company.model.User;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.GroupLayout;
-import javax.swing.JOptionPane;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import javax.swing.LayoutStyle;
 
 
 public class LOG_IN extends javax.swing.JFrame {
 
 
-    private Map<String, String> loginData = new HashMap<String, String>();
+    private final Map<String, String> loginData = new HashMap<String, String>();
 
 
     public boolean is_member() {

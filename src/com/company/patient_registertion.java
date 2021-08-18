@@ -2,10 +2,8 @@ package com.company;
 
 import com.company.model.Patient;
 
-import java.awt.*;
-import java.sql.SQLException;
 import javax.swing.*;
-import javax.xml.crypto.Data;
+import java.awt.*;
 
 public class patient_registertion extends javax.swing.JFrame {
     public patient_registertion() {

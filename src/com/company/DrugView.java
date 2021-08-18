@@ -2,11 +2,8 @@ package com.company;
 
 import com.company.model.Drug;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.sql.SQLException;
-import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 
 public class DrugView extends javax.swing.JFrame {
 
