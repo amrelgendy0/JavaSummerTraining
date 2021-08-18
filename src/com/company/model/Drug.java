@@ -2,17 +2,21 @@ package com.company.model;
 
 public class Drug {
     String name;
-
-    public String getType() {
-        return type;
-    }
+    double price;
+    String expireDate;
+    int id;
+    String type;
 
     public Drug(String name, double price, String expireDate, int id, String type) {
         this.name = name;
         this.price = price;
         this.expireDate = expireDate;
         this.id = id;
-        this.type=type;
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getName() {
@@ -31,11 +35,6 @@ public class Drug {
         return id;
     }
 
-    double price;
-    String expireDate;
-    int id;
-    String type;
-
     @Override
     public String toString() {
         return "Drug{" +
@@ -48,6 +47,6 @@ public class Drug {
     }
 
     public String values() {
-        return name+price+expireDate+id+type;
+        return name + price + expireDate + id + type;
     }
 }

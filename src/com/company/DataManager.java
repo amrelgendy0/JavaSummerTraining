@@ -1,23 +1,25 @@
 package com.company;
-import com.company.model.*;
+
+import com.company.model.Drug;
+import com.company.model.Patient;
+import com.company.model.User;
+
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 
 public class DataManager {
- private static   HashSet<User> users = new HashSet<User>();
-    private static HashSet<Drug> drugs = new HashSet<Drug>();
-    private static HashSet<Patient> patients = new HashSet<Patient>();
+    private static final ArrayList<User> users = new ArrayList<User>();
+    private static final ArrayList<Drug> drugs = new ArrayList<Drug>();
+    private static final ArrayList<Patient> patients = new ArrayList<Patient>();
     static private Connection con = null;
 
-
-    public static void addPatient(Patient p){
-
-
+    public static void addPatient(Patient p) {
         String query = "INSERT INTO Patient (firstname, lastname, Age, prescribeMedicine,Address,Doctor,Date) VALUES (?,?, ?, ?,?,?,?)";
-        try {if(con==null){
-            throw new SQLException();
-        }
+        try {
+            if (con == null) {
+                throw new SQLException();
+            }
             PreparedStatement preparedStmt = con.prepareStatement(query);
             preparedStmt.setString(1, p.getFirstname());
             preparedStmt.setString(2, p.getLastname());
@@ -31,73 +33,75 @@ public class DataManager {
             preparedStmt.close();
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");
-patients.add(p);
+            patients.add(p);
         }
     }
-    public static void initDataBase()
-    {
+
+    public static void initDataBase() {
         String username = "root";
         String password = "Amr@2020";
-        try{
+        try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/PH", username, password);
         } catch (SQLException throwables) {
-            System.out.println("please run mySql first");}
-
-        getUsers();
-
-    }
-
-    public  static void addDrug(Drug d){
-         String query = "INSERT INTO Drug (name, type, exdate, price) VALUES (?,?, ?, ?)";
-         try {if(con==null){
-             throw new SQLException();
-         }
-             PreparedStatement preparedStmt = con.prepareStatement(query);
-             preparedStmt.setString(1,d.getName());
-             preparedStmt.setString(2,d.getType());
-             preparedStmt.setString(3,d.getExpireDate());
-             preparedStmt.setDouble(4,d.getPrice());
-             preparedStmt.execute();
-             getDrug();
-             preparedStmt.close();
-         } catch (SQLException throwables) {
-             System.out.println("please run mySql first");
-             drugs.add(d);
-         }
-
-    }
-
-    public static Patient getPathent(String name)
-    {for(Patient p : patients){
-        if((p.getFirstname() + " " + p.getLastname()).equals(name)){
-            return  p;
+            System.out.println("please run mySql first");
         }
+        getUsers();
+        getDrug();
     }
+
+    public static void addDrug(Drug d) {
+        String query = "INSERT INTO Drug (name, type, exdate, price) VALUES (?,?, ?, ?)";
+        try {
+            if (con == null) {
+                throw new SQLException();
+            }
+            PreparedStatement preparedStmt = con.prepareStatement(query);
+            preparedStmt.setString(1, d.getName());
+            preparedStmt.setString(2, d.getType());
+            preparedStmt.setString(3, d.getExpireDate());
+            preparedStmt.setDouble(4, d.getPrice());
+            preparedStmt.execute();
+            getDrug();
+            preparedStmt.close();
+        } catch (SQLException throwables) {
+            System.out.println("please run mySql first");
+            drugs.add(d);
+        }
+
+    }
+
+    public static Patient getPathent(String name) {
+        for (Patient p : patients) {
+            if ((p.getFirstname() + " " + p.getLastname()).equals(name)) {
+                return p;
+            }
+        }
         return null;
     }
 
-public static ArrayList<Drug> searchMedicine(String key)  {
-            getDrug();
-    ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
-    for (Drug drug : drugs) {
-        if (drug.values().contains(key)) {
-            searchedDrug.add(drug);
+    public static ArrayList<Drug> searchMedicine(String key) {
+        getDrug();
+        ArrayList<Drug> searchedDrug = new ArrayList<Drug>();
+        for (Drug drug : drugs) {
+            if (drug.values().contains(key)) {
+                searchedDrug.add(drug);
+            }
         }
+        return searchedDrug;
     }
-    return searchedDrug;
-}
 
-    public static HashSet<Patient> getPathient() {
+    public static ArrayList<Patient> getPathient() {
 
         String query = "SELECT * FROM Patient";
-        try{
-            if(con==null){
+        try {
+            if (con == null) {
                 throw new SQLException();
-            } patients.clear();
+            }
+            patients.clear();
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                patients.add(new Patient(rs.getString("firstname"), rs.getString("lastname"), rs.getDouble("Age")
+                patients.add(new Patient(rs.getString("firstname"), rs.getString("lastname"), rs.getInt("Age")
                         , rs.getString("prescribeMedicine"), rs.getString("Address"), rs.getString("Doctor"),
                         rs.getString("Date"),
                         rs.getInt("id")
@@ -107,51 +111,55 @@ public static ArrayList<Drug> searchMedicine(String key)  {
 
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");
+            if (patients.isEmpty()) {
+                patients.addAll(Arrays.asList(StaticDataIfSqlServerNotFound.getPatients()));
+            }
+
         }
 
         return patients;
     }
 
-    private static HashSet<User> getUsers()  {
+    private static void getUsers() {
         users.clear();
         String query = "SELECT * FROM Users";
-        try{
-if(con==null){
-    throw new SQLException();
-}
+        try {
+            if (con == null) {
+                throw new SQLException();
+            }
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 String firstName = rs.getString("username");
                 String pass = rs.getString("password");
                 boolean isAdmin = rs.getBoolean("isAdmin");
-                users.add(new User(firstName,pass,isAdmin));
+                users.add(new User(firstName, pass, isAdmin));
             }
             st.close();
-
-
-
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");
-            users.add(new User("0","0",true));
+
+
+            if (users.isEmpty()) {
+                users.addAll(Arrays.asList(StaticDataIfSqlServerNotFound.getUsers()));
+            }
+
         }
 
-        return users;
     }
 
-    private static HashSet<Drug>  getDrug() {
-        try{
-            if(con==null){
+    private static void getDrug() {
+        try {
+            if (con == null) {
                 throw new SQLException();
             }
             drugs.clear();
             String query = "SELECT * FROM Drug";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
-            while (rs.next())
-            {
+            while (rs.next()) {
                 drugs.add(new com.company.model.Drug(
-                        rs.getString("name"),rs.getDouble("price"),
+                        rs.getString("name"), rs.getDouble("price"),
                         rs.getString("exdate"),
                         rs.getInt("id"),
                         rs.getString("type")));
@@ -160,17 +168,20 @@ if(con==null){
 
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");
+            if (drugs.isEmpty()) {
+                drugs.addAll(Arrays.asList(StaticDataIfSqlServerNotFound.getDrugs()));
+            }
+
         }
+    }
+
+    public static ArrayList<Drug> getdrugs() {
         return drugs;
     }
-    public static HashSet<Drug> drugs() {
-        return drugs;
-    }
-    public static HashSet<Patient> patients() {
-        return patients;
-    }
-    public static HashSet<User> users() {
+
+    public static ArrayList<User> users() {
         return users;
     }
+
 }
 

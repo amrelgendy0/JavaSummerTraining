@@ -1,19 +1,11 @@
 import com.company.DataManager;
-import com.company.LOG_IN;
-import java.sql.SQLException;
+import com.company.FirstChoice;
 
 public class Main {
+    public static void main(String[] args) {
+        DataManager.initDataBase();
+        new FirstChoice();
 
-    public static void main(String args[]) {
 
-
-             DataManager.initDataBase();
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LOG_IN().setVisible(true);
-            }
-        });
     }
-
 }
