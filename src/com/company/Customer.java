@@ -12,9 +12,31 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Customer extends JFrame {
-    HashMap<Drug,Integer> userCart = new HashMap<Drug, Integer>();
+    HashMap<Drug, Integer> userCart = new HashMap<Drug, Integer>();
 
     DefaultTableModel tableModel1;
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+    // Generated using JFormDesigner Evaluation license - amr elgendy
+    private JPanel Customer;
+    private JLabel label1;
+    private JLabel label2;
+    private JLabel label3;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JLabel label5;
+    private JLabel label6;
+    private JScrollPane scrollPane1;
+    private JTable table1;
+    private JSpinner spinner1;
+    private JLabel label7;
+    private JScrollPane scrollPane2;
+    private JTable table2;
+    private JButton button1;
+    private JLabel label8;
+    private JLabel label9;
+    private JButton button2;
+
     public Customer() {
 
 
@@ -74,10 +96,9 @@ public class Customer extends JFrame {
         }
     }
 
-
     String getTotalPrice() {
         double total = 0;
-userCart.clear();
+        userCart.clear();
         for (int i = 0; i < table1.getRowCount(); i++) {
             total += (int) tableModel1.getValueAt(i, 1) * (double) tableModel1.getValueAt(i, 2);
             userCart.put(DataManager.searchMedicine((String) tableModel1.getValueAt(i, 0)).get(0), (int) tableModel1.getValueAt(i, 1));
@@ -89,13 +110,10 @@ userCart.clear();
 
     }
 
-    private void button2ActionPerformed(ActionEvent e) {
-        this.setVisible(false);
-        new Thanks(this, new Order(textField1.getText(),textField2.getText(),textField3.getText(),getTotalPrice(),userCart));
-
-
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {
+        this.dispose();
+        new Thanks(new Order(textField1.getText(), textField2.getText(), textField3.getText(), getTotalPrice(), userCart));
     }
-
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -122,12 +140,18 @@ userCart.clear();
 
         //======== Customer ========
         {
-            Customer.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder
-            ( 0, 0, 0, 0) , " ", javax. swing. border. TitledBorder. CENTER, javax. swing. border
-            . TitledBorder. BOTTOM, new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 ), java. awt
-            . Color. red) ,Customer. getBorder( )) ); Customer. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void
-            propertyChange (java .beans .PropertyChangeEvent e) {if ("borde\u0072" .equals (e .getPropertyName () )) throw new RuntimeException( )
-            ; }} );
+            Customer.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder
+                    (0, 0, 0, 0), " ", javax.swing.border.TitledBorder.CENTER, javax.swing.border
+                    .TitledBorder.BOTTOM, new java.awt.Font("Dialo\u0067", java.awt.Font.BOLD, 12), java.awt
+                    .Color.red), Customer.getBorder()));
+            Customer.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+                @Override
+                public void
+                propertyChange(java.beans.PropertyChangeEvent e) {
+                    if ("borde\u0072".equals(e.getPropertyName())) throw new RuntimeException()
+                            ;
+                }
+            });
 
             //---- label1 ----
             label1.setText("Name");
@@ -160,7 +184,7 @@ userCart.clear();
             }
 
             //---- spinner1 ----
-            spinner1.setModel(new SpinnerNumberModel(1, null, null, 1));
+            spinner1.setModel(new SpinnerNumberModel(1, 1, null, 1));
 
             //---- label7 ----
             label7.setText("Quantity");
@@ -190,136 +214,113 @@ userCart.clear();
             //---- button2 ----
             button2.setText("Make Order");
             button2.addActionListener(e -> {
-			button2ActionPerformed(e);
-			button2ActionPerformed(e);
-		});
+                button2ActionPerformed(e);
+            });
 
             GroupLayout CustomerLayout = new GroupLayout(Customer);
             Customer.setLayout(CustomerLayout);
             CustomerLayout.setHorizontalGroup(
-                CustomerLayout.createParallelGroup()
-                    .addGroup(CustomerLayout.createSequentialGroup()
-                        .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    CustomerLayout.createParallelGroup()
                             .addGroup(CustomerLayout.createSequentialGroup()
-                                .addGroup(CustomerLayout.createParallelGroup()
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(120, 120, 120)
-                                        .addComponent(label5, GroupLayout.PREFERRED_SIZE, 269, GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(label7, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6)
-                                        .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 440, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(178, 178, 178)
-                                        .addComponent(button1)))
-                                .addGap(25, 25, 25))
-                            .addGroup(GroupLayout.Alignment.TRAILING, CustomerLayout.createSequentialGroup()
-                                .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                            .addGroup(GroupLayout.Alignment.LEADING, CustomerLayout.createSequentialGroup()
-                                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                             .addGroup(CustomerLayout.createSequentialGroup()
-                                                .addComponent(label1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(18, 18, 18)))
-                        .addGroup(CustomerLayout.createParallelGroup()
+                                                    .addGroup(CustomerLayout.createParallelGroup()
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(120, 120, 120)
+                                                                    .addComponent(label5, GroupLayout.PREFERRED_SIZE, 269, GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(6, 6, 6)
+                                                                    .addComponent(label7, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+                                                                    .addGap(6, 6, 6)
+                                                                    .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
+                                                            .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 440, GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(178, 178, 178)
+                                                                    .addComponent(button1)))
+                                                    .addGap(25, 25, 25))
+                                            .addGroup(GroupLayout.Alignment.TRAILING, CustomerLayout.createSequentialGroup()
+                                                    .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addContainerGap()
+                                                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                    .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(6, 6, 6)
+                                                                    .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                                            .addGroup(GroupLayout.Alignment.LEADING, CustomerLayout.createSequentialGroup()
+                                                                                    .addComponent(label3, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+                                                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE))
+                                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+                                                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 310, GroupLayout.PREFERRED_SIZE)))))
+                                                    .addGap(18, 18, 18)))
+                                    .addGroup(CustomerLayout.createParallelGroup()
+                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                    .addGap(240, 240, 240)
+                                                    .addComponent(label6, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 636, GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                    .addGap(90, 90, 90)
+                                                    .addComponent(label8, GroupLayout.PREFERRED_SIZE, 158, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(6, 6, 6)
+                                                    .addComponent(label9, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE))))
                             .addGroup(CustomerLayout.createSequentialGroup()
-                                .addGap(240, 240, 240)
-                                .addComponent(label6, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 636, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(CustomerLayout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(label8, GroupLayout.PREFERRED_SIZE, 158, GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(label9, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(CustomerLayout.createSequentialGroup()
-                        .addGap(420, 420, 420)
-                        .addComponent(button2))
+                                    .addGap(420, 420, 420)
+                                    .addComponent(button2))
             );
             CustomerLayout.setVerticalGroup(
-                CustomerLayout.createParallelGroup()
-                    .addGroup(CustomerLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(CustomerLayout.createParallelGroup()
+                    CustomerLayout.createParallelGroup()
                             .addGroup(CustomerLayout.createSequentialGroup()
-                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(CustomerLayout.createParallelGroup()
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(label1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(8, 8, 8))
-                                    .addGroup(GroupLayout.Alignment.TRAILING, CustomerLayout.createSequentialGroup()
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)))
-                                .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
-                                .addGap(6, 6, 6)
-                                .addGroup(CustomerLayout.createParallelGroup()
-                                    .addComponent(label3, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(17, 17, 17)
-                                .addGroup(CustomerLayout.createParallelGroup()
-                                    .addComponent(label7, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(7, 7, 7)
-                                .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11)
-                                .addComponent(button1))
-                            .addGroup(CustomerLayout.createSequentialGroup()
-                                .addComponent(label6, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6)
-                                .addGroup(CustomerLayout.createParallelGroup()
-                                    .addComponent(label8, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(CustomerLayout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(label9, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(3, 3, 3)
-                        .addComponent(button2))
+                                    .addGap(6, 6, 6)
+                                    .addGroup(CustomerLayout.createParallelGroup()
+                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                    .addComponent(label5, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(CustomerLayout.createParallelGroup()
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(5, 5, 5)
+                                                                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                                    .addGap(8, 8, 8))
+                                                            .addGroup(GroupLayout.Alignment.TRAILING, CustomerLayout.createSequentialGroup()
+                                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)))
+                                                    .addGroup(CustomerLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(label2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
+                                                    .addGap(6, 6, 6)
+                                                    .addGroup(CustomerLayout.createParallelGroup()
+                                                            .addComponent(label3, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(3, 3, 3)
+                                                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                                    .addGap(17, 17, 17)
+                                                    .addGroup(CustomerLayout.createParallelGroup()
+                                                            .addComponent(label7, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(1, 1, 1)
+                                                                    .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                                    .addGap(7, 7, 7)
+                                                    .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(11, 11, 11)
+                                                    .addComponent(button1))
+                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                    .addComponent(label6, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(6, 6, 6)
+                                                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(6, 6, 6)
+                                                    .addGroup(CustomerLayout.createParallelGroup()
+                                                            .addComponent(label8, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
+                                                            .addGroup(CustomerLayout.createSequentialGroup()
+                                                                    .addGap(10, 10, 10)
+                                                                    .addComponent(label9, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)))))
+                                    .addGap(3, 3, 3)
+                                    .addComponent(button2))
             );
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
-
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - amr elgendy
-    private JPanel Customer;
-    private JLabel label1;
-    private JLabel label2;
-    private JLabel label3;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JLabel label5;
-    private JLabel label6;
-    private JScrollPane scrollPane1;
-    private JTable table1;
-    private JSpinner spinner1;
-    private JLabel label7;
-    private JScrollPane scrollPane2;
-    private JTable table2;
-    private JButton button1;
-    private JLabel label8;
-    private JLabel label9;
-    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

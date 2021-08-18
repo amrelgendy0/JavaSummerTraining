@@ -14,12 +14,31 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
-public class Thanks extends JDialog {
+public class Thanks extends JFrame {
     DefaultTableModel tableModel1;
-    public Thanks(Window owner, Order order) {
-        super(owner);
-        this.setVisible(true);
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+    // Generated using JFormDesigner Evaluation license - amr elgendy
+    private JPanel dialogPane;
+    private JPanel contentPanel;
+    private JLabel label1;
+    private JTextField textField1;
+    private JLabel label2;
+    private JLabel label3;
+    private JTextField textField2;
+    private JLabel label4;
+    private JTextField textField3;
+    private JScrollPane scrollPane2;
+    private JTable table1;
+    private JLabel label8;
+    private JLabel label9;
+    private JPanel buttonBar;
+    private JButton okButton;
+    private JButton cancelButton;
+    private JLabel label7;
+
+    public Thanks(Order order) {
         initComponents();
+        super.setVisible(true);
         textField1.setText(order.getCustomerName());
         textField2.setText(order.getPhoneNumber());
         textField3.setText(order.getAddress());
@@ -29,7 +48,6 @@ public class Thanks extends JDialog {
         label9.setText(order.getTotalPrice());
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
-
 
     public Object[] getNames(Order order) {
         ArrayList<String> sddg = new ArrayList<String>();
@@ -76,27 +94,34 @@ public class Thanks extends JDialog {
         okButton = new JButton();
         cancelButton = new JButton();
         label7 = new JLabel();
-
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(new GridLayout());
-
+        textField3.setDisabledTextColor(new Color(0, 0, 0));
+        textField1.setDisabledTextColor(new Color(0, 0, 0));
+        textField2.setDisabledTextColor(new Color(0, 0, 0));
         //======== dialogPane ========
         {
             dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
-            dialogPane.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder
-            ( 0, 0, 0, 0) , " ", javax. swing. border. TitledBorder. CENTER, javax. swing. border
-            . TitledBorder. BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt
-            . Color. red) ,dialogPane. getBorder( )) ); dialogPane. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void
-            propertyChange (java .beans .PropertyChangeEvent e) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( )
-            ; }} );
+            dialogPane.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax
+                    .swing.border.EmptyBorder(0, 0, 0, 0), "", javax.swing
+                    .border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BOTTOM, new java.awt.
+                    Font("Dia\u006cog", java.awt.Font.BOLD, 12), java.awt.Color.red
+            ), dialogPane.getBorder()));
+            dialogPane.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+                @Override
+                public void propertyChange(java.beans.PropertyChangeEvent e) {
+                    if ("\u0062ord\u0065r".equals(e.getPropertyName(
+                    ))) throw new RuntimeException();
+                }
+            });
             dialogPane.setLayout(new BorderLayout());
 
             //======== contentPanel ========
             {
 
                 //---- label1 ----
-                label1.setText("We Have Received Your Order And It Will Be Ready Soon");
+                label1.setText("We Have Received Your Order And Will Be Ready Soon");
                 label1.setFont(label1.getFont().deriveFont(label1.getFont().getStyle() | Font.BOLD, label1.getFont().getSize() + 5f));
 
                 //---- textField1 ----
@@ -137,53 +162,53 @@ public class Thanks extends JDialog {
                 GroupLayout contentPanelLayout = new GroupLayout(contentPanel);
                 contentPanel.setLayout(contentPanelLayout);
                 contentPanelLayout.setHorizontalGroup(
-                    contentPanelLayout.createParallelGroup()
-                        .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addGroup(contentPanelLayout.createParallelGroup()
-                                .addComponent(label1)
-                                .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(contentPanelLayout.createSequentialGroup()
-                                        .addComponent(label4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(5, 5, 5)
-                                        .addComponent(textField3, GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE))
-                                    .addGroup(contentPanelLayout.createSequentialGroup()
-                                        .addComponent(label3)
-                                        .addGap(5, 5, 5)
-                                        .addComponent(textField2))
-                                    .addGroup(contentPanelLayout.createSequentialGroup()
-                                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(5, 5, 5)
-                                        .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)))
+                        contentPanelLayout.createParallelGroup()
                                 .addGroup(contentPanelLayout.createSequentialGroup()
-                                    .addGap(113, 113, 113)
-                                    .addComponent(label8, GroupLayout.PREFERRED_SIZE, 158, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(label9, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE))
-                                .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 725, GroupLayout.PREFERRED_SIZE))
-                            .addGap(19, 19, 19))
+                                        .addGroup(contentPanelLayout.createParallelGroup()
+                                                .addComponent(label1)
+                                                .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                                        .addGroup(contentPanelLayout.createSequentialGroup()
+                                                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(5, 5, 5)
+                                                                .addComponent(textField3, GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE))
+                                                        .addGroup(contentPanelLayout.createSequentialGroup()
+                                                                .addComponent(label3)
+                                                                .addGap(5, 5, 5)
+                                                                .addComponent(textField2))
+                                                        .addGroup(contentPanelLayout.createSequentialGroup()
+                                                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(5, 5, 5)
+                                                                .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)))
+                                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                                        .addGap(113, 113, 113)
+                                                        .addComponent(label8, GroupLayout.PREFERRED_SIZE, 158, GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(label9, GroupLayout.PREFERRED_SIZE, 199, GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 725, GroupLayout.PREFERRED_SIZE))
+                                        .addGap(19, 19, 19))
                 );
                 contentPanelLayout.setVerticalGroup(
-                    contentPanelLayout.createParallelGroup()
-                        .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addComponent(label1)
-                            .addGap(5, 5, 5)
-                            .addGroup(contentPanelLayout.createParallelGroup()
-                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                            .addGap(5, 5, 5)
-                            .addGroup(contentPanelLayout.createParallelGroup()
-                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                            .addGap(5, 5, 5)
-                            .addGroup(contentPanelLayout.createParallelGroup()
-                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                            .addGap(7, 7, 7)
-                            .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(label8, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(label9, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)))
+                        contentPanelLayout.createParallelGroup()
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                        .addComponent(label1)
+                                        .addGap(5, 5, 5)
+                                        .addGroup(contentPanelLayout.createParallelGroup()
+                                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addGap(5, 5, 5)
+                                        .addGroup(contentPanelLayout.createParallelGroup()
+                                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addGap(5, 5, 5)
+                                        .addGroup(contentPanelLayout.createParallelGroup()
+                                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addGap(7, 7, 7)
+                                        .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(label8, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(label9, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)))
                 );
             }
             dialogPane.add(contentPanel, BorderLayout.CENTER);
@@ -192,22 +217,22 @@ public class Thanks extends JDialog {
             {
                 buttonBar.setBorder(new EmptyBorder(12, 0, 0, 0));
                 buttonBar.setLayout(new GridBagLayout());
-                ((GridBagLayout)buttonBar.getLayout()).columnWidths = new int[] {0, 85, 80};
-                ((GridBagLayout)buttonBar.getLayout()).columnWeights = new double[] {1.0, 0.0, 0.0};
+                ((GridBagLayout) buttonBar.getLayout()).columnWidths = new int[]{0, 85, 80};
+                ((GridBagLayout) buttonBar.getLayout()).columnWeights = new double[]{1.0, 0.0, 0.0};
 
                 //---- okButton ----
                 okButton.setText("OK");
                 okButton.addActionListener(e -> okButtonActionPerformed(e));
                 buttonBar.add(okButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                    new Insets(0, 0, 0, 5), 0, 0));
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 5), 0, 0));
 
                 //---- cancelButton ----
                 cancelButton.setText("Cancel");
                 cancelButton.addActionListener(e -> cancelButtonActionPerformed(e));
                 buttonBar.add(cancelButton, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
-                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                    new Insets(0, 0, 0, 0), 0, 0));
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
             }
             dialogPane.add(buttonBar, BorderLayout.SOUTH);
         }
@@ -219,25 +244,5 @@ public class Thanks extends JDialog {
         label7.setText("text");
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
-
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - amr elgendy
-    private JPanel dialogPane;
-    private JPanel contentPanel;
-    private JLabel label1;
-    private JTextField textField1;
-    private JLabel label2;
-    private JLabel label3;
-    private JTextField textField2;
-    private JLabel label4;
-    private JTextField textField3;
-    private JScrollPane scrollPane2;
-    private JTable table1;
-    private JLabel label8;
-    private JLabel label9;
-    private JPanel buttonBar;
-    private JButton okButton;
-    private JButton cancelButton;
-    private JLabel label7;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

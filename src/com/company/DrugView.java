@@ -8,6 +8,25 @@ import java.awt.*;
 public class DrugView extends javax.swing.JFrame {
 
 
+    // Variables declaration - do not modify//GEN-BEGIN:variablesG
+    // Generated using JFormDesigner Evaluation license - amr elgendy
+    private JPanel pan;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JLabel jLabel5;
+    private JLabel jLabel6;
+    private JLabel jLabel7;
+    private JTextField jTextField1;
+    private JTextField jTextField2;
+    private JTextField jTextField3;
+    private JTextField jTextField4;
+    private JTextField jTextField5;
+    private JTextField jTextField6;
+    private JButton jButton1;
+    private JButton jButton2;
+
     public DrugView() {
         initComponents();
 
@@ -50,12 +69,18 @@ public class DrugView extends javax.swing.JFrame {
         //======== pan ========
         {
             pan.setForeground(new Color(0, 0, 153));
-            pan.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing.
-            border. EmptyBorder( 0, 0, 0, 0) , " ", javax. swing. border. TitledBorder. CENTER
-            , javax. swing. border. TitledBorder. BOTTOM, new java .awt .Font ("D\u0069al\u006fg" ,java .awt .Font
-            .BOLD ,12 ), java. awt. Color. red) ,pan. getBorder( )) ); pan. addPropertyChangeListener (
-            new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062or\u0064er"
-            .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+            pan.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.
+                    border.EmptyBorder(0, 0, 0, 0), " ", javax.swing.border.TitledBorder.CENTER
+                    , javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("D\u0069al\u006fg", java.awt.Font
+                    .BOLD, 12), java.awt.Color.red), pan.getBorder()));
+            pan.addPropertyChangeListener(
+                    new java.beans.PropertyChangeListener() {
+                        @Override
+                        public void propertyChange(java.beans.PropertyChangeEvent e) {
+                            if ("\u0062or\u0064er"
+                                    .equals(e.getPropertyName())) throw new RuntimeException();
+                        }
+                    });
 
             //---- jLabel1 ----
             jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
@@ -116,108 +141,108 @@ public class DrugView extends javax.swing.JFrame {
             GroupLayout panLayout = new GroupLayout(pan);
             pan.setLayout(panLayout);
             panLayout.setHorizontalGroup(
-                panLayout.createParallelGroup()
-                    .addGroup(panLayout.createSequentialGroup()
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                    panLayout.createParallelGroup()
                             .addGroup(panLayout.createSequentialGroup()
-                                .addGroup(panLayout.createParallelGroup()
-                                    .addGroup(panLayout.createSequentialGroup()
-                                        .addGap(22, 22, 22)
-                                        .addGroup(panLayout.createParallelGroup()
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(panLayout.createSequentialGroup()
-                                                .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(panLayout.createParallelGroup()
+                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                    .addGap(22, 22, 22)
+                                                                    .addGroup(panLayout.createParallelGroup()
+                                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                                    .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                                                                    .addGap(18, 18, 18)
+                                                                                    .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
+                                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                                                                    .addGap(20, 20, 20)
+                                                                                    .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
+                                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                                    .addGap(2, 2, 2)
+                                                                                    .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))))
+                                                            .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                                    .addGroup(panLayout.createSequentialGroup()
+                                                                            .addContainerGap()
+                                                                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                                                            .addGap(18, 18, 18)
+                                                                            .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
+                                                                    .addGroup(GroupLayout.Alignment.LEADING, panLayout.createSequentialGroup()
+                                                                            .addGap(24, 24, 24)
+                                                                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                                                            .addGap(18, 18, 18)
+                                                                            .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
+                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                    .addGap(22, 22, 22)
+                                                                    .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                                                    .addGap(18, 18, 18)
+                                                                    .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(panLayout.createSequentialGroup()
+                                                                    .addGap(194, 194, 194)
+                                                                    .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
+                                                    .addGap(59, 59, 59))
                                             .addGroup(panLayout.createSequentialGroup()
-                                                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(20, 20, 20)
-                                                .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(panLayout.createSequentialGroup()
-                                                .addGap(2, 2, 2)
-                                                .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addGroup(panLayout.createSequentialGroup()
-                                            .addContainerGap()
-                                            .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(GroupLayout.Alignment.LEADING, panLayout.createSequentialGroup()
-                                            .addGap(24, 24, 24)
-                                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(panLayout.createSequentialGroup()
-                                        .addGap(22, 22, 22)
-                                        .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(panLayout.createSequentialGroup()
-                                        .addGap(194, 194, 194)
-                                        .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(59, 59, 59))
-                            .addGroup(panLayout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(jButton1)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
-                                    .addGap(90, 90, 90)
+                                                    .addGap(50, 50, 50)
+                                                    .addComponent(jButton1)
+                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jButton2)
+                                                    .addGap(90, 90, 90)
 
-                            ))
-                        .addContainerGap(194, Short.MAX_VALUE))
-                    .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
-                        .addGap(0, 120, Short.MAX_VALUE)
-                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 215, GroupLayout.PREFERRED_SIZE)
-                        .addGap(150, 150, 150))
+                                            ))
+                                    .addContainerGap(194, Short.MAX_VALUE))
+                            .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
+                                    .addGap(0, 120, Short.MAX_VALUE)
+                                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 215, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(150, 150, 150))
             );
             panLayout.setVerticalGroup(
-                panLayout.createParallelGroup()
-                    .addGroup(panLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panLayout.createParallelGroup()
+                    panLayout.createParallelGroup()
                             .addGroup(panLayout.createSequentialGroup()
-                                .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7))
-                            .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
-                                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)))
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                        .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1))
-                        .addGap(0, 0, 0))
+                                    .addGap(10, 10, 10)
+                                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panLayout.createParallelGroup()
+                                            .addGroup(panLayout.createSequentialGroup()
+                                                    .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(7, 7, 7))
+                                            .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
+                                                    .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(18, 18, 18)))
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField4, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
+                                    .addGap(23, 23, 23)
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField5, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                                    .addGroup(panLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jButton2)
+                                            .addComponent(jButton1))
+                                    .addGap(0, 0, 0))
             );
         }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addComponent(pan, GroupLayout.Alignment.TRAILING, 450, 450, 450)
+                contentPaneLayout.createParallelGroup()
+                        .addComponent(pan, GroupLayout.Alignment.TRAILING, 450, 450, 450)
         );
         contentPaneLayout.setVerticalGroup(
-            contentPaneLayout.createParallelGroup()
-                .addComponent(pan, GroupLayout.Alignment.TRAILING, 420, 420, 420)
+                contentPaneLayout.createParallelGroup()
+                        .addComponent(pan, GroupLayout.Alignment.TRAILING, 420, 420, 420)
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -236,19 +261,16 @@ public class DrugView extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Drug drug = new Drug(jTextField6.getText(),Double.parseDouble(jTextField3.getText()),jTextField2.getText(),0,jTextField1.getText());
+        Drug drug = new Drug(jTextField6.getText(), Double.parseDouble(jTextField3.getText()), jTextField2.getText(), 0, jTextField1.getText());
 
-            DataManager.addDrug(drug);
+        DataManager.addDrug(drug);
 
-           jTextField1.setText("");
-           jTextField2.setText("");
-           jTextField3.setText("");
-           jTextField4.setText("");
-           jTextField5.setText("");
-           jTextField6.setText("");
-
-
-
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
 
 
     }//EN-LAST:event_jButton1ActionPerformed
@@ -256,25 +278,5 @@ public class DrugView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variablesG
-    // Generated using JFormDesigner Evaluation license - amr elgendy
-    private JPanel pan;
-    private JLabel jLabel1;
-    private JLabel jLabel2;
-    private JLabel jLabel3;
-    private JLabel jLabel4;
-    private JLabel jLabel5;
-    private JLabel jLabel6;
-    private JLabel jLabel7;
-    private JTextField jTextField1;
-    private JTextField jTextField2;
-    private JTextField jTextField3;
-    private JTextField jTextField4;
-    private JTextField jTextField5;
-    private JTextField jTextField6;
-    private JButton jButton1;
-    private JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

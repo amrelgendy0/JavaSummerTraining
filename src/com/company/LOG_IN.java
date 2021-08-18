@@ -14,7 +14,33 @@ public class LOG_IN extends javax.swing.JFrame {
 
 
     private final Map<String, String> loginData = new HashMap<String, String>();
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Generated using JFormDesigner Evaluation license - amr elgendy
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JPasswordField tfp;
+    private JTextField tfu;
+    private JButton can;
+    private JButton btn;
+    private JButton btn2;
 
+    public LOG_IN() {
+        this.setVisible(true);
+        Image myImage = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("1.jpg"))).getImage();
+        this.setContentPane(new ImagePanel(myImage));
+        initComponents();
+
+        for (User user : DataManager.users()
+        ) {
+            if (user.isAdmin()) {
+                loginData.put(user.getUsername(), user.getPassword());
+
+            }
+        }
+        tfp.setText("");
+        super.setResizable(false);
+    }
 
     public boolean is_member() {
 
@@ -34,23 +60,6 @@ public class LOG_IN extends javax.swing.JFrame {
 
     private void tfuActionPerformed(ActionEvent e) {
         // TODO add your code here
-    }
-
-    public LOG_IN() {
-        this.setVisible(true);
-        Image myImage = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("1.jpg"))).getImage();
-        this.setContentPane(new ImagePanel(myImage));
-        initComponents();
-
-        for (User user : DataManager.users()
-        ) {
-            if (user.isAdmin()) {
-                loginData.put(user.getUsername(), user.getPassword());
-
-            }
-        }
-        tfp.setText("");
-        super.setResizable(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -79,12 +88,12 @@ public class LOG_IN extends javax.swing.JFrame {
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel2.setForeground(new Color(0,0,153));
+        jLabel2.setForeground(new Color(0, 0, 153));
         jLabel2.setText("Password");
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jLabel3.setForeground(new Color(0,0,153));
+        jLabel3.setForeground(new Color(0, 0, 153));
         jLabel3.setText("User name");
 
         //---- tfp ----
@@ -122,27 +131,27 @@ public class LOG_IN extends javax.swing.JFrame {
                                 .addGap(0, 0, 0))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                                 .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(23, 23, 23)
-                                                .addGroup(contentPaneLayout.createParallelGroup()
-                                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(114, 114, 114)
-                                                .addComponent(btn, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(155, 155, 155)
-                                                .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(270, 270, 270)
+                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                        .addGap(23, 23, 23)
+                                                        .addGroup(contentPaneLayout.createParallelGroup()
+                                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(tfp, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))
+                                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                                        .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                        .addComponent(tfu, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE))))
+                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                        .addGap(114, 114, 114)
+                                                        .addComponent(btn, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(155, 155, 155)
+                                                        .addComponent(can, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                        .addGap(270, 270, 270)
 //                                                .addComponent(btn2, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(135, Short.MAX_VALUE))
-        )));
+                                                        .addContainerGap(135, Short.MAX_VALUE))
+                                )));
         contentPaneLayout.setVerticalGroup(
                 contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
@@ -183,16 +192,6 @@ public class LOG_IN extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "User Id or Password may be wrong. Please Try Again!", "Message", JOptionPane.ERROR_MESSAGE);
 
     }//GEN-LAST:event_btnActionPerformed
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - amr elgendy
-    private JLabel jLabel1;
-    private JLabel jLabel2;
-    private JLabel jLabel3;
-    private JPasswordField tfp;
-    private JTextField tfu;
-    private JButton can;
-    private JButton btn;
-    private JButton btn2;
 
     // End of variables declaration//GEN-END:variables
     public String getUsername() {
