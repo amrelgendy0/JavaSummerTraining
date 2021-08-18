@@ -44,17 +44,15 @@ public class FirstChoice extends JFrame {
     }
 
     private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        DataManager.initDataBase();
-        java.awt.EventQueue.invokeLater(new Runnable() {
+         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOG_IN().setVisible(true);
+                new LOG_IN();
             }
         });
         this.dispose();
     }
 
     private void customerButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        DataManager.initDataBase();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Customer();

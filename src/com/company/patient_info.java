@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.HashSet;
 public class patient_info extends javax.swing.JFrame {
-    HashSet<Patient> patients  = null;
+    ArrayList<Patient> patients  = null;
     
     private void table1MouseClicked(MouseEvent e) {
         JTable source = (JTable)e.getSource();

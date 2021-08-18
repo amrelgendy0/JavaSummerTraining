@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class DataManager {
-    private static final HashSet<User> users = new HashSet<User>();
-    private static final HashSet<Drug> drugs = new HashSet<Drug>();
-    private static final HashSet<Patient> patients = new HashSet<Patient>();
+    private static final ArrayList<User> users = new ArrayList<User>();
+    private static final ArrayList<Drug> drugs = new ArrayList<Drug>();
+    private static final ArrayList<Patient> patients = new ArrayList<Patient>();
     static private Connection con = null;
 
     public static void addPatient(Patient p) {
@@ -46,6 +46,7 @@ patients.add(p);
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");}
         getUsers();
+        getDrug();
     }
 
     public  static void addDrug(Drug d){
@@ -88,7 +89,7 @@ public static ArrayList<Drug> searchMedicine(String key)  {
     return searchedDrug;
 }
 
-    public static HashSet<Patient> getPathient() {
+    public static ArrayList<Patient> getPathient() {
 
         String query = "SELECT * FROM Patient";
         try{
@@ -172,7 +173,11 @@ if(drugs.isEmpty()){
         }
     }
 
-    public static HashSet<User> users() {
+    public static ArrayList<Drug> getdrugs() {
+        return drugs;
+    }
+
+    public static ArrayList<User> users() {
         return users;
     }
 

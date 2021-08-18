@@ -37,14 +37,15 @@ public class LOG_IN extends javax.swing.JFrame {
     }
 
     public LOG_IN() {
+        this.setVisible(true);
         Image myImage = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("1.jpg"))).getImage();
         this.setContentPane(new ImagePanel(myImage));
         initComponents();
 
-        for (User user: DataManager.users()
-             ) {
-            if(user.isAdmin()){
-                loginData.put(user.getUsername(),user.getPassword());
+        for (User user : DataManager.users()
+        ) {
+            if (user.isAdmin()) {
+                loginData.put(user.getUsername(), user.getPassword());
 
             }
         }
@@ -182,40 +183,6 @@ public class LOG_IN extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "User Id or Password may be wrong. Please Try Again!", "Message", JOptionPane.ERROR_MESSAGE);
 
     }//GEN-LAST:event_btnActionPerformed
-
-//    private void showCredits(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-//
-//
-//        JOptionPane.showMessageDialog(null, textBlocks(), "Made By", JOptionPane.WARNING_MESSAGE);
-//
-//    }//GEN-LAST:event_btnActionPerformed
-//
-//    public String textBlocks() {
-//        String[] names = new String[]{
-//                "عمرو أحمد محمد حسنين الجندي - جروب ١٠",
-//                "محمد أيمن أحمد محمد عبدالله - جروب ١٢",
-//                "ماجدة جمال عبدالمجيد حسين الجبالي - جروب ١١",
-//                "محمد أمين أحمد العزب شلبي - جروب ١٢",
-//                "فاطمة خالد عبدالمغني محمد قابيل - جروب ١٠",
-//        };
-//        String data = "";
-//        for (String name : names) {
-//            data += name + "\n";
-//        }
-//        return data;
-//    }
-
-//
-//    private void tfuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfuActionPerformed
-//        // TODO add your handling code here:
-//    }//GEN-LAST:event_tfuActionPerformed
-//
-//    private void tfpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfpActionPerformed
-//        // TODO add your handling code here:
-//    }//GEN-LAST:event_tfpActionPerformed
-//
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // Generated using JFormDesigner Evaluation license - amr elgendy
     private JLabel jLabel1;
