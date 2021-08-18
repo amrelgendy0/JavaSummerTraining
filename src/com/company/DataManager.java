@@ -160,8 +160,10 @@ if(con==null){
 
         } catch (SQLException throwables) {
             System.out.println("please run mySql first");
-drugs.clear();
-            drugs.addAll(Arrays.asList(getDrugsLocalIfSqlServerNotFound()));
+if(drugs.isEmpty()){
+    drugs.addAll(Arrays.asList(getDrugsLocalIfSqlServerNotFound()));
+}
+
         }
         return drugs;
     }
