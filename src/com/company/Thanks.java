@@ -85,7 +85,7 @@ public class Thanks extends JDialog {
         {
             dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
             dialogPane.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder
-            ( 0, 0, 0, 0) , "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax. swing. border. TitledBorder. CENTER, javax. swing. border
+            ( 0, 0, 0, 0) , " ", javax. swing. border. TitledBorder. CENTER, javax. swing. border
             . TitledBorder. BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt
             . Color. red) ,dialogPane. getBorder( )) ); dialogPane. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void
             propertyChange (java .beans .PropertyChangeEvent e) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( )
@@ -96,7 +96,7 @@ public class Thanks extends JDialog {
             {
 
                 //---- label1 ----
-                label1.setText("We Have Received Your Order And Will Be Ready Soon");
+                label1.setText("We Have Received Your Order And It Will Be Ready Soon");
                 label1.setFont(label1.getFont().deriveFont(label1.getFont().getStyle() | Font.BOLD, label1.getFont().getSize() + 5f));
 
                 //---- textField1 ----

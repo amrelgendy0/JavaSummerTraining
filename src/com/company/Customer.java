@@ -123,7 +123,7 @@ userCart.clear();
         //======== Customer ========
         {
             Customer.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder
-            ( 0, 0, 0, 0) , "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e", javax. swing. border. TitledBorder. CENTER, javax. swing. border
+            ( 0, 0, 0, 0) , " ", javax. swing. border. TitledBorder. CENTER, javax. swing. border
             . TitledBorder. BOTTOM, new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 ), java. awt
             . Color. red) ,Customer. getBorder( )) ); Customer. addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void
             propertyChange (java .beans .PropertyChangeEvent e) {if ("borde\u0072" .equals (e .getPropertyName () )) throw new RuntimeException( )
@@ -134,7 +134,7 @@ userCart.clear();
             label1.setFont(label1.getFont().deriveFont(label1.getFont().getSize() + 5f));
 
             //---- label2 ----
-            label2.setText("phone number");
+            label2.setText("Phone number");
             label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
 
             //---- label3 ----
