@@ -66,12 +66,13 @@ public class SEARCH_RESULT extends javax.swing.JFrame { Object[][] data = {
 
         //---- jButton1 ----
         jButton1.setFont(new Font("Tahoma", Font.BOLD, 24));
+        jButton1.setForeground(new Color(0, 0, 153));
         jButton1.setText("Find");
         jButton1.addActionListener(e -> jButton1ActionPerformed(e));
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 36));
-        jLabel2.setForeground(new Color(187, 74, 80));
+        jLabel2.setForeground(new Color(0,0,0));
         jLabel2.setText("Result");
 
         //======== scrollPane1 ========

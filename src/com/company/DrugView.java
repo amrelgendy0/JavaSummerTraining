@@ -67,32 +67,32 @@ public class DrugView extends javax.swing.JFrame {
 
             //---- jLabel2 ----
             jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel2.setForeground(new Color(0, 0, 153));
+            jLabel2.setForeground(new Color(0, 0, 0));
             jLabel2.setText("Drug type");
 
             //---- jLabel3 ----
             jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel3.setForeground(new Color(0, 0, 153));
+            jLabel3.setForeground(new Color(0, 0, 0));
             jLabel3.setText("Drug name");
 
             //---- jLabel4 ----
             jLabel4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel4.setForeground(new Color(0, 0, 153));
+            jLabel4.setForeground(new Color(0, 0, 0));
             jLabel4.setText("Price");
 
             //---- jLabel5 ----
             jLabel5.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel5.setForeground(new Color(0, 0, 153));
+            jLabel5.setForeground(new Color(0, 0, 0));
             jLabel5.setText("Shelf no.");
 
             //---- jLabel6 ----
             jLabel6.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel6.setForeground(new Color(0, 0, 153));
-            jLabel6.setText("Ex. date");
+            jLabel6.setForeground(new Color(0, 0, 0));
+            jLabel6.setText("Ex.date");
 
             //---- jLabel7 ----
             jLabel7.setFont(new Font("Tahoma", Font.PLAIN, 18));
-            jLabel7.setForeground(new Color(0, 0, 153));
+            jLabel7.setForeground(new Color(0, 0, 0));
             jLabel7.setText("Drug id");
 
             //---- jTextField1 ----
@@ -169,7 +169,7 @@ public class DrugView extends javax.swing.JFrame {
                         .addContainerGap(194, Short.MAX_VALUE))
                     .addGroup(GroupLayout.Alignment.TRAILING, panLayout.createSequentialGroup()
                         .addGap(0, 120, Short.MAX_VALUE)
-                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 225, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 215, GroupLayout.PREFERRED_SIZE)
                         .addGap(150, 150, 150))
             );
             panLayout.setVerticalGroup(

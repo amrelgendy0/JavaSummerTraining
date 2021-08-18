@@ -164,6 +164,7 @@ public class patient_info extends javax.swing.JFrame {
 
         //---- jButton1 ----
         jButton1.setFont(new Font("Tahoma", Font.BOLD, 14));
+        jButton1.setForeground(new Color(0, 0, 153));
         jButton1.setText("Exit");
         jButton1.addActionListener(e -> jButton1ActionPerformed(e));
 

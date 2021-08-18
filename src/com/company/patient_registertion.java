@@ -56,7 +56,7 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jLabel2 ----
         jLabel2.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel2.setForeground(new Color(0, 153, 0));
+        jLabel2.setForeground(new Color(0, 0, 0));
         jLabel2.setText("First name");
 
         //---- jTextField1 ----
@@ -64,7 +64,7 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jLabel3 ----
         jLabel3.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel3.setForeground(new Color(0, 153, 0));
+        jLabel3.setForeground(new Color(0, 0, 0));
         jLabel3.setText("Last name");
 
         //---- jTextField2 ----
@@ -72,12 +72,12 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jLabel4 ----
         jLabel4.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel4.setForeground(new Color(0, 153, 0));
+        jLabel4.setForeground(new Color(0, 0, 0));
         jLabel4.setText("Age");
 
         //---- jLabel5 ----
         jLabel5.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel5.setForeground(new Color(0, 153, 0));
+        jLabel5.setForeground(new Color(0, 0, 0));
         jLabel5.setText("Prescribe medicine");
 
         //---- jTextField4 ----
@@ -85,7 +85,7 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jLabel6 ----
         jLabel6.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel6.setForeground(new Color(0, 153, 0));
+        jLabel6.setForeground(new Color(0, 0, 0));
         jLabel6.setText("Address");
 
         //---- jTextField5 ----
@@ -93,7 +93,7 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jLabel8 ----
         jLabel8.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel8.setForeground(new Color(0, 153, 0));
+        jLabel8.setForeground(new Color(0, 0, 0));
         jLabel8.setText("Doctor");
 
         //---- jTextField6 ----
@@ -101,19 +101,19 @@ public class patient_registertion extends javax.swing.JFrame {
 
         //---- jButton1 ----
         jButton1.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jButton1.setForeground(new Color(0, 153, 0));
+        jButton1.setForeground(new Color(0, 0, 153));
         jButton1.setText("Cancel");
         jButton1.addActionListener(e -> jButton1ActionPerformed(e));
 
         //---- jButton2 ----
         jButton2.setFont(new Font("Tahoma", Font.BOLD, 18));
-        jButton2.setForeground(new Color(0, 153, 0));
+        jButton2.setForeground(new Color(0, 0, 153));
         jButton2.setText("Register");
         jButton2.addActionListener(e -> jButton2ActionPerformed(e));
 
         //---- jLabel9 ----
         jLabel9.setFont(new Font("Tahoma", Font.BOLD, 14));
-        jLabel9.setForeground(new Color(0, 153, 0));
+        jLabel9.setForeground(new Color(0, 0, 0));
         jLabel9.setText("Date");
 
         //---- jTextField7 ----

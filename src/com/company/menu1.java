@@ -57,7 +57,7 @@ public class menu1 extends javax.swing.JFrame {
 
         //---- jButton3 ----
         jButton3.setFont(new Font("Tahoma", Font.BOLD , 20));
-        jButton3.setForeground(new Color(2, 149, 218));
+        jButton3.setForeground(new Color(0, 0, 153));
         jButton3.setText("Log out");
         jButton3.addActionListener(e -> jButton3ActionPerformed(e));
 
