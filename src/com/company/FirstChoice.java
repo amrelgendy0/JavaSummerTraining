@@ -97,8 +97,8 @@ public class FirstChoice extends JFrame {
         adminButton = new JButton();
         customerButton = new JButton();
         creditsButton = new JButton();
-        var label1 = new JLabel();
-        var label2 = new JLabel();
+        JLabel label1 = new JLabel();
+        JLabel label2 = new JLabel();
 
         //======== FirstChoice ========
         {

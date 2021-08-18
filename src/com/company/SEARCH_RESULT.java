@@ -42,7 +42,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
         //======== this ========
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Medicine");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
 
         //---- jLabel1 ----
         jLabel1.setFont(new Font("Tahoma", Font.BOLD, 24));
@@ -133,11 +133,11 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
 
             for (Drug dd : medicine) {
                 switch (i) {
-                    case 0 -> toshow.add(dd.getName());
-                    case 1 -> toshow.add(dd.getType());
-                    case 2 -> toshow.add(dd.getExpireDate());
-                    case 3 -> toshow.add(dd.getPrice());
-                    case 4 -> toshow.add(dd.getId());
+                    case 0: { toshow.add(dd.getName()); break;}
+                    case 1: {toshow.add(dd.getType());break;}
+                    case 2: {toshow.add(dd.getExpireDate());break;}
+                    case 3: {toshow.add(dd.getPrice());break;}
+                    case 4: {toshow.add(dd.getId());break;}
                 }
             }
             model.addColumn(col.getHeaderValue().toString(), toshow.toArray());

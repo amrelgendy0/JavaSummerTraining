@@ -96,7 +96,7 @@ public class Thanks extends JFrame {
         cancelButton = new JButton();
         label7 = new JLabel();
         //======== this ========
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
         contentPane.setLayout(new GridLayout());
         textField3.setDisabledTextColor(new Color(0, 0, 0));
         textField1.setDisabledTextColor(new Color(0, 0, 0));
