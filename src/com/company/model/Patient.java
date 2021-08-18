@@ -33,7 +33,7 @@ int id;
         return date;
     }
 
-    public Patient(String firstname, String lastname, double age, String prescribeMedicine, String address, String doctor, String date,int id) {
+    public Patient(String firstname, String lastname, int age, String prescribeMedicine, String address, String doctor, String date,int id) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;

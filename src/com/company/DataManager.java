@@ -98,7 +98,7 @@ public static ArrayList<Drug> searchMedicine(String key)  {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                patients.add(new Patient(rs.getString("firstname"), rs.getString("lastname"), rs.getDouble("Age")
+                patients.add(new Patient(rs.getString("firstname"), rs.getString("lastname"), rs.getInt("Age")
                         , rs.getString("prescribeMedicine"), rs.getString("Address"), rs.getString("Doctor"),
                         rs.getString("Date"),
                         rs.getInt("id")

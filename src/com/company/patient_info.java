@@ -22,7 +22,7 @@ public class patient_info extends javax.swing.JFrame {
         assert p != null;
         jTextField3.setText(p.getFirstname());
         jTextField5.setText(p.getLastname());
-        jTextField2.setText(String.valueOf(p.getAge()));
+        jTextField2.setText(String.valueOf((int)p.getAge()));
         jTextField1.setText(p.getPrescribeMedicine());
         jTextField7.setText(p.getAddress());
         jTextField4.setText(p.getDoctor());
@@ -121,26 +121,33 @@ public class patient_info extends javax.swing.JFrame {
 
         //---- jTextField1 ----
         jTextField1.setEnabled(false);
+        jTextField1.setDisabledTextColor(new Color(0,0,0));
         jTextField1.addActionListener(e -> jTextField1ActionPerformed(e));
 
         //---- jTextField2 ----
+        jTextField2.setDisabledTextColor(new Color(0,0,0));
         jTextField2.setEnabled(false);
 
         //---- jTextField3 ----
+        jTextField3.setDisabledTextColor(new Color(0,0,0));
         jTextField3.setEnabled(false);
 
         //---- jTextField4 ----
         jTextField4.setEnabled(false);
+        jTextField4.setDisabledTextColor(new Color(0,0,0));
         jTextField4.addActionListener(e -> jTextField4ActionPerformed(e));
 
         //---- jTextField5 ----
         jTextField5.setEnabled(false);
+        jTextField5.setDisabledTextColor(new Color(0,0,0));
         jTextField5.addActionListener(e -> jTextField5ActionPerformed(e));
 
         //---- jTextField6 ----
+        jTextField6.setDisabledTextColor(new Color(0,0,0));
         jTextField6.setEnabled(false);
 
         //---- jTextField7 ----
+        jTextField7.setDisabledTextColor(new Color(0,0,0));
         jTextField7.setEnabled(false);
 
         //---- jButton1 ----

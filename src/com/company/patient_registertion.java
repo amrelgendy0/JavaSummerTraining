@@ -244,7 +244,7 @@ public class patient_registertion extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Patient p = new Patient(jTextField1.getText(),
                 jTextField2.getText(),
-               Double.parseDouble( jTextField3.getText()),
+                Integer.parseInt(jTextField3.getText()),
                 jTextField4.getText(),jTextField5.getText(),
                 jTextField7.getText(),jTextField6.getText(),0
         );
