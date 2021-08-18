@@ -151,6 +151,7 @@ public class SEARCH_RESULT extends javax.swing.JFrame {
                 }
             }
             model.addColumn(col.getHeaderValue().toString(), toshow.toArray());
+            table1.scrollRectToVisible(new Rectangle(table1.getCellRect(0, 0, true)));
         }
     }
 }
