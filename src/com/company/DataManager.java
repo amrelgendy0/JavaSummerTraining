@@ -7,7 +7,6 @@ import com.company.model.User;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class DataManager {
     private static final ArrayList<User> users = new ArrayList<User>();

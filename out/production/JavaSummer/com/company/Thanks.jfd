@@ -3,21 +3,64 @@ JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.GridLayout ) ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 				name: "dialogPane"
 				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
-				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {comp label1:::p::p, par t:l::p {seq {comp label4:::p:118:p, space :p:5:p, comp textField3::::597:x}, seq {comp label3:::p::p, space :p:5:p, comp textField2:::::x}, seq {comp label2:::p:118:p, space :p:5:p, comp textField1::::597:x}}, seq l {space :p:113:p, comp label8:::p:158:p, space :::p, comp label9:::p:199:p}, comp scrollPane2:::p:725:p}, space :p:19:p}}"
+					"$verticalGroup": "par l {seq {comp label1:::p::p, space :5:5:p, par l {comp label2:::p:27:p, comp textField1:::p::p}, space :5:5:p, par l {comp label3:::p:27:p, comp textField2:::p::p}, space :5:5:p, par l {comp label4:::p:27:p, comp textField3:::p::p}, space :p:7:p, comp scrollPane2::::325:x, space :::p, par b {comp label8::b:p:72:p, comp label9::b:p:49:p}}}"
+				} ) {
 					name: "contentPanel"
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label1"
 						"text": "We Have Received Your Order And Will Be Ready Soon"
 						"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
-					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 5
-						"y": -10
-						"height": 95
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+						"enabled": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Name"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "phone number"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField2"
+						"enabled": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Address"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField3"
+						"enabled": false
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "table1"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "Total Price :"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 11, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "0"
+						"foreground": sfield java.awt.Color blue
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 14, false )
 					} )
 				}, new FormLayoutConstraints( class java.lang.String ) {
 					"value": "Center"
@@ -49,12 +92,16 @@ new FormModel {
 				}, new FormLayoutConstraints( class java.lang.String ) {
 					"value": "South"
 				} )
-			}, new FormLayoutConstraints( class java.lang.String ) {
-				"value": "Center"
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 525, 160 )
+			"location": new java.awt.Point( 115, 20 )
+			"size": new java.awt.Dimension( 770, 615 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label7"
+			"text": "text"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 985, 160 )
 		} )
 	}
 }
